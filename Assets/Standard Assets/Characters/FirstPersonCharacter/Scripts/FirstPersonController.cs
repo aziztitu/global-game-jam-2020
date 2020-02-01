@@ -1,4 +1,5 @@
 using System;
+using Cinemachine;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 using UnityStandardAssets.Utility;
@@ -29,6 +30,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
 
         private Camera m_Camera;
+        public CinemachineVirtualCamera vCam;
         private bool m_Jump;
         private float m_YRotation;
         private Vector2 m_Input;
@@ -46,15 +48,15 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private void Start()
         {
             m_CharacterController = GetComponent<CharacterController>();
+            m_OriginalCameraPosition = vCam.transform.localPosition;
             m_Camera = Camera.main;
-            m_OriginalCameraPosition = m_Camera.transform.localPosition;
             m_FovKick.Setup(m_Camera);
-            m_HeadBob.Setup(m_Camera, m_StepInterval);
+            m_HeadBob.Setup(vCam.transform, m_StepInterval);
             m_StepCycle = 0f;
             m_NextStep = m_StepCycle/2f;
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
-			m_MouseLook.Init(transform , m_Camera.transform);
+			m_MouseLook.Init(transform , vCam.transform);
         }
 
 
@@ -186,7 +188,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
             if (m_CharacterController.velocity.magnitude > 0 && m_CharacterController.isGrounded)
             {
-                m_Camera.transform.localPosition =
+                vCam.transform.localPosition =
                     m_HeadBob.DoHeadBob(m_CharacterController.velocity.magnitude +
                                       (speed*(m_IsWalking ? 1f : m_RunstepLenghten)));
                 newCameraPosition = m_Camera.transform.localPosition;
@@ -197,7 +199,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 newCameraPosition = m_Camera.transform.localPosition;
                 newCameraPosition.y = m_OriginalCameraPosition.y - m_JumpBob.Offset();
             }
-            m_Camera.transform.localPosition = newCameraPosition;
+            vCam.transform.localPosition = newCameraPosition;
         }
 
 
@@ -236,7 +238,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void RotateView()
         {
-            m_MouseLook.LookRotation (transform, m_Camera.transform);
+            m_MouseLook.LookRotation (transform, vCam.transform);
         }
 
 
