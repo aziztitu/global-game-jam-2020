@@ -10,6 +10,9 @@ public class ObjectPlacePoint : MonoBehaviour
 
     [ReadOnly] public RearrangableObjectData correctObjectData;
 
+    public bool isHoldingObject => holdingObject != null;
+    public Pickable holdingObject => holder.GetComponentInChildren<Pickable>();
+
     // Start is called before the first frame update
     void Start()
     {

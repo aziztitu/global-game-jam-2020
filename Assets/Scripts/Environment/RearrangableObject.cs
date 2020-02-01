@@ -33,6 +33,7 @@ public class RearrangableObject : MonoBehaviour
 
     void Rearrange()
     {
+        transform.parent = null;
         transform.position = RearrangableObjectManager.Instance.GetRandomRearrangePoint().position;
     }
 
@@ -44,16 +45,16 @@ public class RearrangableObject : MonoBehaviour
             var originalPoint = Instantiate(originalPointPrefab, transform.position, transform.rotation)
                 .GetComponent<ObjectPlacePoint>();
             originalPoint.correctObjectData = data;
+
+            RearrangableObjectManager.Instance.AddPointForRearrangingObjects(originalPoint);
         }
     }
 
     void OnPickedUp()
     {
-
     }
 
     void OnDropped()
     {
-        
     }
 }

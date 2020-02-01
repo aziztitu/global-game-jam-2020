@@ -15,6 +15,6 @@ public class TaskManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // rearrangeObjectsTask.CalculateTaskStatus();
     }
 }

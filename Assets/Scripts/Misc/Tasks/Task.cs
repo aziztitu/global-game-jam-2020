@@ -6,15 +6,7 @@ using UnityEngine;
 [Serializable]
 public class Task
 {
-    // Start is called before the first frame update
-    void Start()
+    public virtual void CalculateTaskStatus()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
