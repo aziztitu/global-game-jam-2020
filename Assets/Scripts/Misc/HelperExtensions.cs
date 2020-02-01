@@ -140,6 +140,17 @@ public static class HelperExtensions
         }
     }
 
+    public static List<Transform> GetChildrenOnly(this Transform self)
+    {
+        List<Transform> list = new List<Transform>();
+        for (int i = 0; i < self.childCount; i++)
+        {
+            list.Add(self.GetChild(i));
+        }
+
+        return list;
+    }
+
     #endregion
 
     #region Bounds
