@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Gallery : MonoBehaviour
+public class Gallery : SingletonMonoBehaviour<Gallery>
 {
     public Sprite[] currentImages;
     public GameObject arrowL, arrowR;
@@ -36,7 +36,7 @@ public class Gallery : MonoBehaviour
         }
 
 
-        ImageObj = ImageParent.GetComponentsInChildren<Transform>();
+        ImageObj = HelperExtensions.GetChildrenOnly(ImageParent.transform).ToArray();
 
         for (int i = 0; i < ImageObj.Length; i++)
         {
@@ -52,11 +52,11 @@ public class Gallery : MonoBehaviour
 
         currentNumber.text = ((currentIndex + 1).ToString() + " / " + (currentImages.Length).ToString());
 
-        if (Input.GetKeyUp(KeyCode.RightArrow) && galleryUp && currentIndex < currentImages.Length - 1)
+        if (Input.GetKeyUp(KeyCode.E) && galleryUp && currentIndex < currentImages.Length - 1)
         {
             NextImage();
         }
-        if (Input.GetKeyUp(KeyCode.LeftArrow) && galleryUp && currentIndex != 0)
+        if (Input.GetKeyUp(KeyCode.Q) && galleryUp && currentIndex != 0)
         {
             PrevImage();
         }
