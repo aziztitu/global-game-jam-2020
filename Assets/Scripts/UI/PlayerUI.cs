@@ -10,7 +10,6 @@ public class PlayerUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -22,9 +21,14 @@ public class PlayerUI : MonoBehaviour
     void UpdatePickableInfo()
     {
         var playerPickController = PlayerModel.Instance.playerPickController;
-        if (playerPickController.isFocusedOnPickable)
+
+        if (playerPickController.isHoldingPickable && playerPickController.pickableOnHand.hasObjectPlacePointInRadius)
         {
-            pickableInfoText.text = playerPickController.pickableOnFocus.instruction;
+            pickableInfoText.text = playerPickController.pickableOnHand.placeInstruction;
+        }
+        else if (playerPickController.isFocusedOnPickable)
+        {
+            pickableInfoText.text = playerPickController.pickableOnFocus.pickUpInstruction;
         }
         else
         {

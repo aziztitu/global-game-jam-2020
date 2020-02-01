@@ -7,7 +7,17 @@ public class RearrangableObject : MonoBehaviour
 {
     [SerializeField] [ReadOnly] private Vector3 originalPosition;
 
+    public RearrangableObjectData data;
     public GameObject originalPointPrefab;
+
+    private Pickable pickable;
+
+    void Awake()
+    {
+        pickable = GetComponent<Pickable>();
+        pickable.onPickedUp.AddListener(OnPickedUp);
+        pickable.onDropped.AddListener(OnDropped);
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -32,8 +42,18 @@ public class RearrangableObject : MonoBehaviour
         if (spawnOriginalPoint)
         {
             var originalPoint = Instantiate(originalPointPrefab, transform.position, transform.rotation)
-                .GetComponent<RearrangableObjectOriginalPoint>();
-            originalPoint.correctObject = this;
+                .GetComponent<ObjectPlacePoint>();
+            originalPoint.correctObjectData = data;
         }
+    }
+
+    void OnPickedUp()
+    {
+
+    }
+
+    void OnDropped()
+    {
+        
     }
 }
