@@ -30,7 +30,7 @@ public class Pickable : MonoBehaviour
     {
         rigidbody.isKinematic = true;
         transform.parent = playerPickController.pickableHolder;
-        transform.DOLocalMove(Vector3.zero, playerPickController.pickUpMoveDuration).Play();
+        transform.DOLocalMove(Vector3.zero, playerPickController.pickUpMoveDuration).Play();    // TODO: Kill the Tween during other actions
     }
 
     public void OnDropped()
