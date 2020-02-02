@@ -97,7 +97,7 @@ public class FriendModel : MonoBehaviour
         gameObject.SetActive(true);
         stateMachine.SwitchState(IdleState.Instance);
 
-        if (Random.Range(0, 1) < TaskManager.Instance.hideFriendsTask.godModeProbability)
+        if (Random.Range(0f, 1f) < TaskManager.Instance.hideFriendsTask.godModeProbability)
         {
             GodMode();
         }
