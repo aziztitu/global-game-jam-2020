@@ -1,14 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class Pickable : MonoBehaviour
 {
+    public bool isFocused => PlayerModel.Instance.playerInteractionController.pickableOnFocus == this;
+
     public Rigidbody rigidbody { get; private set; }
     public ObjectPlacePoint objectPlacePointInRadius { get; private set; }
-    public bool hasObjectPlacePointInRadius => objectPlacePointInRadius != null && !objectPlacePointInRadius.isHoldingObject;
+
+    public bool hasObjectPlacePointInRadius =>
+        objectPlacePointInRadius != null && !objectPlacePointInRadius.isHoldingObject;
 
     public string pickUpInstruction = "'Left Click' to pick up";
     public string dropInstruction = "'Right Click' to throw/drop";

@@ -11,6 +11,8 @@ public class FriendModel : MonoBehaviour
     public IdleState.StateData idleStateData = new IdleState.StateData();
     public WanderingState.StateData wanderingStateData = new WanderingState.StateData();
 
+    public float minVelocityToGetHit;
+
     void Awake()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
@@ -29,5 +31,19 @@ public class FriendModel : MonoBehaviour
     void Update()
     {
         stateMachine.Update();
+    }
+
+    void OnCollisionEnter(Collision other)
+    {
+        print(other.gameObject);
+
+        if (other.rigidbody)
+        {
+            var pickable = other.rigidbody.GetComponent<Pickable>();
+            if (pickable && other.rigidbody.velocity.magnitude >= minVelocityToGetHit)
+            {
+                // Gets hit
+            }
+        }
     }
 }
