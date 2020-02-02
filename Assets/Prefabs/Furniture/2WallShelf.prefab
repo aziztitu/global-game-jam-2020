@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6102829346094515009}
   - component: {fileID: 3020398349598865783}
   - component: {fileID: 8851285347390178702}
+  - component: {fileID: -6975089271989964011}
   m_Layer: 0
   m_Name: 2WallShelf
   m_TagString: Untagged
@@ -79,3 +80,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &-6975089271989964011
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7127723954774339922}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1550514412580984892, guid: 45328aff72b572640b0a3364d6a20142, type: 3}

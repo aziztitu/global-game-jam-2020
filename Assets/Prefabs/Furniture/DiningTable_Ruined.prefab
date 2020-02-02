@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7065392060430996037}
   - component: {fileID: 6906926556384967602}
   - component: {fileID: 5674621277512911871}
+  - component: {fileID: 7280961975613250622}
   m_Layer: 0
   m_Name: GJ_Dinning_Room_Setwrecked_Dining_Chair_15
   m_TagString: Untagged
@@ -79,6 +80,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &7280961975613250622
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 208771003120740062}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -4403945907965161371, guid: aa869d260df5cfe4694ba9dfaccb15b6, type: 3}
 --- !u!1 &1065968050211743833
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,6 +105,7 @@ GameObject:
   - component: {fileID: 4627114694821085029}
   - component: {fileID: 5905939676403166360}
   - component: {fileID: 3757702971987159534}
+  - component: {fileID: 1061434326286680469}
   m_Layer: 0
   m_Name: GJ_Dinning_Room_Setwrecked_Dining_Chair_14
   m_TagString: Untagged
@@ -158,6 +174,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &1061434326286680469
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065968050211743833}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8016368352020750574, guid: aa869d260df5cfe4694ba9dfaccb15b6, type: 3}
 --- !u!1 &1297575583848881964
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,6 +199,7 @@ GameObject:
   - component: {fileID: 7330910083050693344}
   - component: {fileID: 8052113051476418195}
   - component: {fileID: 4940391130006492728}
+  - component: {fileID: 6270293389782059135}
   m_Layer: 0
   m_Name: GJ_Dinning_Room_Setwrecked_Dining_Chair_11
   m_TagString: Untagged
@@ -237,6 +268,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &6270293389782059135
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297575583848881964}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2658935621769193180, guid: aa869d260df5cfe4694ba9dfaccb15b6, type: 3}
 --- !u!1 &2180049013522859520
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,6 +293,7 @@ GameObject:
   - component: {fileID: 4907588979362745703}
   - component: {fileID: 857607004034881444}
   - component: {fileID: 5232084747805555095}
+  - component: {fileID: 7685805608220763731}
   m_Layer: 0
   m_Name: GJ_Dinning_Room_Setwrecked_Dining_Chair_16
   m_TagString: Untagged
@@ -316,6 +362,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &7685805608220763731
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2180049013522859520}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 9219419222753537920, guid: aa869d260df5cfe4694ba9dfaccb15b6, type: 3}
 --- !u!1 &4519341347507753762
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,6 +387,7 @@ GameObject:
   - component: {fileID: 3828826788241431319}
   - component: {fileID: 1305297576883955929}
   - component: {fileID: 6836524327899403543}
+  - component: {fileID: 1236867445425194976}
   m_Layer: 0
   m_Name: GJ_Dinning_Room_Setwrecked_Dining_Chair_12
   m_TagString: Untagged
@@ -395,6 +456,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &1236867445425194976
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4519341347507753762}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6021567141943851802, guid: aa869d260df5cfe4694ba9dfaccb15b6, type: 3}
 --- !u!1 &6035569008847526404
 GameObject:
   m_ObjectHideFlags: 0
@@ -406,6 +481,7 @@ GameObject:
   - component: {fileID: 8699812492182294334}
   - component: {fileID: 4075287346357330304}
   - component: {fileID: 7753153250905481747}
+  - component: {fileID: 2149163432504663156}
   m_Layer: 0
   m_Name: GJ_Dinning_Room_Setwrecked_Dining_Chair_13
   m_TagString: Untagged
@@ -474,6 +550,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &2149163432504663156
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6035569008847526404}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6222043449333209029, guid: aa869d260df5cfe4694ba9dfaccb15b6, type: 3}
 --- !u!1 &6237271098768393732
 GameObject:
   m_ObjectHideFlags: 0
@@ -485,6 +575,7 @@ GameObject:
   - component: {fileID: 535941659949229062}
   - component: {fileID: 5496068218330307788}
   - component: {fileID: 1822518765345907885}
+  - component: {fileID: 1897528865475209466}
   m_Layer: 0
   m_Name: GJ_Dinning_Room_Setwrecked_Dining_Chair_09
   m_TagString: Untagged
@@ -553,6 +644,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &1897528865475209466
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6237271098768393732}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1658066180883892779, guid: aa869d260df5cfe4694ba9dfaccb15b6, type: 3}
 --- !u!1 &6741552248316508694
 GameObject:
   m_ObjectHideFlags: 0
@@ -564,6 +669,7 @@ GameObject:
   - component: {fileID: 2416722589797503486}
   - component: {fileID: 6479919592498203685}
   - component: {fileID: 3692359640738798507}
+  - component: {fileID: 3715102734448540874}
   m_Layer: 0
   m_Name: GJ_Dinning_Room_Setwrecked_Dining_Chair_10
   m_TagString: Untagged
@@ -632,6 +738,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &3715102734448540874
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6741552248316508694}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 7355430922547728621, guid: aa869d260df5cfe4694ba9dfaccb15b6, type: 3}
 --- !u!1 &6751982159417826440
 GameObject:
   m_ObjectHideFlags: 0
@@ -682,6 +802,7 @@ GameObject:
   - component: {fileID: 1865438565082921755}
   - component: {fileID: 9139179308790334030}
   - component: {fileID: 3211107170210537181}
+  - component: {fileID: 9106775177283275800}
   m_Layer: 0
   m_Name: GJ_Dinning_Room_Setwrecked_Dining_Table1
   m_TagString: Untagged
@@ -750,3 +871,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &9106775177283275800
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7671216229063457190}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6651249237002188042, guid: aa869d260df5cfe4694ba9dfaccb15b6, type: 3}

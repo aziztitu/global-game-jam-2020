@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5388225617419750350}
   - component: {fileID: 7617474986033388647}
   - component: {fileID: 360955794269902653}
+  - component: {fileID: -4462776496189813051}
   m_Layer: 0
   m_Name: Beer_Can_01
   m_TagString: Untagged
@@ -79,3 +80,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &-4462776496189813051
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9214300929575598309}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1959584996385478098, guid: e996b34662c08eb40b06d728aeb4598f, type: 3}

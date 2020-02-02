@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1298342887931289858}
   - component: {fileID: 5612801747970718119}
   - component: {fileID: 4436153230945172557}
+  - component: {fileID: 8328464611333885028}
   m_Layer: 0
   m_Name: Energy_Drink_Can_01 1
   m_TagString: Untagged
@@ -79,3 +80,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &8328464611333885028
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189116402852648008}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 1870035699664086535, guid: e996b34662c08eb40b06d728aeb4598f, type: 3}

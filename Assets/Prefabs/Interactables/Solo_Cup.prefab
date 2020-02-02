@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4107055078967350882}
   - component: {fileID: 5018195716244188244}
   - component: {fileID: 1628261279881023661}
+  - component: {fileID: -7385826901472281208}
   m_Layer: 0
   m_Name: Solo_Cup
   m_TagString: Untagged
@@ -79,3 +80,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &-7385826901472281208
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055083718899065969}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4069213633552394350, guid: 3896587df2e7e0e40a314a942bf52073, type: 3}

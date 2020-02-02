@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2964401034735169588}
   - component: {fileID: 8421542965842687223}
   - component: {fileID: 6447641988799733937}
+  - component: {fileID: 44938818637990137}
   m_Layer: 0
   m_Name: Pillow_3 1
   m_TagString: Untagged
@@ -79,6 +80,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &44938818637990137
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327356111460899143}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3147524107574420031, guid: 350978aad8366754f97d54cd824051b7, type: 3}
 --- !u!1 &487944524496258108
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,6 +105,7 @@ GameObject:
   - component: {fileID: 146356407432976271}
   - component: {fileID: 1770917786637918967}
   - component: {fileID: 944952823109027848}
+  - component: {fileID: 3018301190778285893}
   m_Layer: 0
   m_Name: Pillow
   m_TagString: Untagged
@@ -158,6 +174,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &3018301190778285893
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 487944524496258108}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4747795219173961485, guid: 350978aad8366754f97d54cd824051b7, type: 3}
 --- !u!1 &2699443535238830322
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,6 +199,7 @@ GameObject:
   - component: {fileID: 1637692726142427735}
   - component: {fileID: 6984291687493992306}
   - component: {fileID: 6411774041051165865}
+  - component: {fileID: 9171934495641127502}
   m_Layer: 0
   m_Name: Pillow1 1
   m_TagString: Untagged
@@ -237,6 +268,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &9171934495641127502
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699443535238830322}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 7131036847332024727, guid: 350978aad8366754f97d54cd824051b7, type: 3}
 --- !u!1 &4328532994500037528
 GameObject:
   m_ObjectHideFlags: 0
@@ -283,6 +328,7 @@ GameObject:
   - component: {fileID: 2037400317717598457}
   - component: {fileID: 5209635862429563618}
   - component: {fileID: 5185788909503638226}
+  - component: {fileID: 2000516793670375190}
   m_Layer: 0
   m_Name: Pillow_2 1
   m_TagString: Untagged
@@ -351,6 +397,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &2000516793670375190
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8709157046936728832}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6183601088796765792, guid: 350978aad8366754f97d54cd824051b7, type: 3}
 --- !u!1 &8984441039073344419
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,6 +422,7 @@ GameObject:
   - component: {fileID: 3339466003914689515}
   - component: {fileID: 655026094420229521}
   - component: {fileID: 4611112587828902795}
+  - component: {fileID: 2392661266305853117}
   m_Layer: 0
   m_Name: Bed_Untidy_Bed_Bed
   m_TagString: Untagged
@@ -432,3 +493,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &2392661266305853117
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8984441039073344419}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 494058127608879899, guid: 350978aad8366754f97d54cd824051b7, type: 3}
