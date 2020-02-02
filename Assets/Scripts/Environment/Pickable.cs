@@ -8,6 +8,7 @@ using UnityEngine.Events;
 public class Pickable : MonoBehaviour
 {
     public bool isFocused => PlayerModel.Instance.playerInteractionController.pickableOnFocus == this;
+    public bool isHeld => PlayerModel.Instance.playerInteractionController.pickableOnHand == this;
 
     public Rigidbody rigidbody { get; private set; }
     public ObjectPlacePoint objectPlacePointInRadius { get; private set; }
@@ -17,6 +18,8 @@ public class Pickable : MonoBehaviour
 
     public string pickUpInstruction = "'Left Click' to pick up";
     public string dropInstruction = "'Right Click' to throw/drop";
+
+    public float dropForceMultiplier = 1f;
 
     public UnityEvent onPickedUp;
     public UnityEvent onDropped;

@@ -13,18 +13,28 @@ public class FriendModel : MonoBehaviour
 
     public float minVelocityToGetHit;
 
+    public GameObject avatar;
+    public Animator animator;
+    public GameObject ragdollPrefab;
+
+    public bool isHidden => gameObject.activeInHierarchy;
+    public FriendRagdoll friendRagdoll = null;
+
+    public bool enableRagdolling = true;
+
     void Awake()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
 
         stateMachine = new StateMachine<FriendModel>(this);
         stateMachine.SwitchState(IdleState.Instance);
+
+        TaskManager.Instance.hideFriendsTask.AddFriend(this);
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -35,6 +45,11 @@ public class FriendModel : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
+        if (!enableRagdolling)
+        {
+            return;
+        }
+
         print(other.gameObject);
 
         if (other.rigidbody)
@@ -42,8 +57,25 @@ public class FriendModel : MonoBehaviour
             var pickable = other.rigidbody.GetComponent<Pickable>();
             if (pickable && other.rigidbody.velocity.magnitude >= minVelocityToGetHit)
             {
+                print(other.rigidbody.velocity);
+
                 // Gets hit
+                // Instantiate ragdoll
+                friendRagdoll = Instantiate(ragdollPrefab, transform.position, transform.rotation)
+                    .GetComponentInChildren<FriendRagdoll>();
+
+                friendRagdoll.friendModelToRevive = this;
+
+                gameObject.SetActive(false);
             }
         }
+    }
+
+    public void Revive()
+    {
+        friendRagdoll = null;
+
+        gameObject.SetActive(true);
+        stateMachine.SwitchState(IdleState.Instance);
     }
 }
