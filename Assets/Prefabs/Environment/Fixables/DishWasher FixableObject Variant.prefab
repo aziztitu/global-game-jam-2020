@@ -7,6 +7,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1529239672681096141, guid: f766660ce0e20ee4ba101cbd4c6cb2bf,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1529239673093780852, guid: f766660ce0e20ee4ba101cbd4c6cb2bf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -66,6 +71,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DishWasher FixableObject Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529239673093780853, guid: f766660ce0e20ee4ba101cbd4c6cb2bf,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529239673290962784, guid: f766660ce0e20ee4ba101cbd4c6cb2bf,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f766660ce0e20ee4ba101cbd4c6cb2bf, type: 3}
@@ -163,6 +178,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dishwasher_Opened
       objectReference: {fileID: 0}
+    - target: {fileID: 9176689706534947620, guid: ad3aa74d2cfe1144f88ab44c76ee19dc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad3aa74d2cfe1144f88ab44c76ee19dc, type: 3}
 --- !u!1001 &54429062970109178
@@ -176,6 +196,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Dishwasher_Closed
+      objectReference: {fileID: 0}
+    - target: {fileID: 493070927550514650, guid: 1022740a58f46f54fb4b40c2d6dceaed,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3498422513144068041, guid: 1022740a58f46f54fb4b40c2d6dceaed,
         type: 3}

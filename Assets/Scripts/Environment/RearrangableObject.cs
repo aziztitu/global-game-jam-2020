@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Microsoft.VisualBasic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody), typeof(Pickable))]
 public class RearrangableObject : MonoBehaviour
 {
     [SerializeField] [ReadOnly] private Vector3 originalPosition;

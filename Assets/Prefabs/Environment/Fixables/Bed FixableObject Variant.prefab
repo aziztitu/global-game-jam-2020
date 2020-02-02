@@ -7,6 +7,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8816378069427237664}
     m_Modifications:
+    - target: {fileID: 327356111460899143, guid: e7ce999d4a489274c8637c276e6257bd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 487944524496258108, guid: e7ce999d4a489274c8637c276e6257bd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1983486006929081368, guid: e7ce999d4a489274c8637c276e6257bd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -62,10 +72,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2699443535238830322, guid: e7ce999d4a489274c8637c276e6257bd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4328532994500037528, guid: e7ce999d4a489274c8637c276e6257bd,
         type: 3}
       propertyPath: m_Name
       value: Bed_Untidy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4328532994500037528, guid: e7ce999d4a489274c8637c276e6257bd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8709157046936728832, guid: e7ce999d4a489274c8637c276e6257bd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8984441039073344419, guid: e7ce999d4a489274c8637c276e6257bd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7ce999d4a489274c8637c276e6257bd, type: 3}
@@ -76,10 +106,35 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8816378070029526923}
     m_Modifications:
+    - target: {fileID: 431773343836602391, guid: 576c50fea1bc4804d81b55a08f847d43,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 719863225756248888, guid: 576c50fea1bc4804d81b55a08f847d43,
         type: 3}
       propertyPath: m_Name
       value: Bed_Tidy
+      objectReference: {fileID: 0}
+    - target: {fileID: 719863225756248888, guid: 576c50fea1bc4804d81b55a08f847d43,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4129292112325840570, guid: 576c50fea1bc4804d81b55a08f847d43,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4228476007412336564, guid: 576c50fea1bc4804d81b55a08f847d43,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5806471425062045117, guid: 576c50fea1bc4804d81b55a08f847d43,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7427131562678587676, guid: 576c50fea1bc4804d81b55a08f847d43,
         type: 3}
@@ -145,6 +200,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1529239672681096141, guid: f766660ce0e20ee4ba101cbd4c6cb2bf,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1529239673093780852, guid: f766660ce0e20ee4ba101cbd4c6cb2bf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -204,6 +264,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bed FixableObject Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529239673093780853, guid: f766660ce0e20ee4ba101cbd4c6cb2bf,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529239673290962784, guid: f766660ce0e20ee4ba101cbd4c6cb2bf,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f766660ce0e20ee4ba101cbd4c6cb2bf, type: 3}

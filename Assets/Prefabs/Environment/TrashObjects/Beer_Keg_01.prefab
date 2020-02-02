@@ -12,6 +12,9 @@ GameObject:
   - component: {fileID: 5245011556098307461}
   - component: {fileID: 8888095204268696980}
   - component: {fileID: 8301793380453355883}
+  - component: {fileID: -7884489509706919008}
+  - component: {fileID: -1244743752350656015}
+  - component: {fileID: 54214310257318864}
   m_Layer: 0
   m_Name: Beer_Keg_01
   m_TagString: Untagged
@@ -94,3 +97,51 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -341562790491230251, guid: e996b34662c08eb40b06d728aeb4598f, type: 3}
+--- !u!54 &-7884489509706919008
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7219869442889291276}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
+--- !u!114 &-1244743752350656015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7219869442889291276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 642eaf3363dcf5e43880afc8c491684a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickUpInstruction: '''Left Click'' to pick up'
+  dropInstruction: '''Right Click'' to throw/drop'
+  onPickedUp:
+    m_PersistentCalls:
+      m_Calls: []
+  onDropped:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &54214310257318864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7219869442889291276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d11a3ca4b177286439a2e3f798f8f4af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
