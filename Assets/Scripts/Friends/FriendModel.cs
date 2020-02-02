@@ -22,6 +22,8 @@ public class FriendModel : MonoBehaviour
 
     public bool enableRagdolling = true;
 
+    private Dictionary<Renderer, Material[]> savedShaders = new Dictionary<Renderer, Material[]>();
+
     void Awake()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
@@ -35,12 +37,29 @@ public class FriendModel : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        SaveShaders();
     }
 
     // Update is called once per frame
     void Update()
     {
         stateMachine.Update();
+    }
+
+    void SaveShaders()
+    {
+        foreach (var component in GetComponentsInChildren<Renderer>())
+        {
+            savedShaders[component] = component.materials;
+        }
+    }
+
+    void RestoreShaders()
+    {
+        foreach (var component in GetComponentsInChildren<Renderer>())
+        {
+            component.materials = savedShaders[component];
+        }
     }
 
     void OnCollisionEnter(Collision other)
@@ -77,5 +96,28 @@ public class FriendModel : MonoBehaviour
 
         gameObject.SetActive(true);
         stateMachine.SwitchState(IdleState.Instance);
+
+        if (Random.Range(0, 1) < TaskManager.Instance.hideFriendsTask.godModeProbability)
+        {
+            GodMode();
+        }
+        else
+        {
+            RestoreShaders();
+        }
+    }
+
+    void GodMode()
+    {
+        foreach (var component in GetComponentsInChildren<Renderer>())
+        {
+            var mats = new Material[savedShaders[component].Length];
+            for (int i = 0; i < mats.Length; i++)
+            {
+                mats[i] = TaskManager.Instance.hideFriendsTask.fresnel;
+            }
+
+            component.materials = mats;
+        }
     }
 }

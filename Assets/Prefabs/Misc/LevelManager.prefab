@@ -50,6 +50,7 @@ MonoBehaviour:
   initialParentsDistance: 100
   parentsTravelSpeed: 60
   mainMenuScene: Main Menu
+  housePictureCamera: {fileID: 0}
 --- !u!114 &8778519027424319806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,6 +63,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af4447daf68b1a94d8912131ccd60e3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trashCleaningTask:
+    maxTrashCount: 30
+    trashPrefabs:
+    - {fileID: 1028479423658821440, guid: 2cd4cb3ff1e276d428a501cb5668ea07, type: 3}
+    - {fileID: 439460745794241254, guid: c9e13e5611d49894695511310dd8fe07, type: 3}
+    - {fileID: 9214300929575598309, guid: 2517e4db96d34854b878c0d7abfbb537, type: 3}
+    - {fileID: 7219869442889291276, guid: 2be1a7c6e76454d4c89878e9f3b1e106, type: 3}
+    - {fileID: 1189116402852648008, guid: bfb6079fa702a4144a4caeb9066e8d2d, type: 3}
+    - {fileID: 4871287310688774375, guid: 58f4605a021a53e4e816111f88d1ed46, type: 3}
+    - {fileID: 1055083718899065969, guid: a8de5a360098f054686c92f0d1e1195b, type: 3}
+    - {fileID: 3929838100110811208, guid: 747ac808a4cd53f489563041bc987c44, type: 3}
+  hideFriendsTask:
+    godModeProbability: 0.1
+    fresnel: {fileID: 2100000, guid: 18ad62ae4734a8f48b9f4ed821eaba1d, type: 2}
+  bestRearrangeLeft: 10
+  worstRearrangeLeft: 25
+  rearrangeWeight: 0.5
+  bestUnfixedLeft: 0
+  worstUnfixedLeft: 2
+  fixWeight: 0.2
+  bestTrashLeft: 10
+  worstTrashLeft: 25
+  trashWeight: 0.3
+  bestFriendsLeft: 2
+  worstFriendsLeft: 6
+  friendsWeight: 0.3
+  score: 0
 --- !u!114 &4026742300002883471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,3 +140,5 @@ MonoBehaviour:
   maxActionInterval: 15
   actionProbability: 0.75
   actionMinDistanceFromPlayer: 15
+  minRearrangeObjectForce: 100
+  maxRearrangeObjectForce: 200
