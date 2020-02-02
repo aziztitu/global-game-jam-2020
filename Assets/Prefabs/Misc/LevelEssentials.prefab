@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 279472217}
+  - component: {fileID: 279472218}
   m_Layer: 0
   m_Name: PhoneHolder
   m_TagString: Untagged
@@ -24,13 +25,32 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 279472216}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 250, y: -99, z: 0}
+  m_LocalPosition: {x: 250, y: -139, z: 0}
   m_LocalScale: {x: 0.87, y: 0.87, z: 0.87}
   m_Children:
   - {fileID: 2086251439323431662}
   m_Father: {fileID: 1394378640}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &279472218
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 279472216}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 324a7ab02f337624888017d53cb24626, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &309105212
 GameObject:
   m_ObjectHideFlags: 0
@@ -269,6 +289,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 279472217}
     m_Modifications:
+    - target: {fileID: 2089398832, guid: f022aefae883d354891f0b05142ac70f, type: 3}
+      propertyPath: holderAnim
+      value: 
+      objectReference: {fileID: 279472218}
     - target: {fileID: 808647291906523648, guid: f022aefae883d354891f0b05142ac70f,
         type: 3}
       propertyPath: m_textInfo.characterCount

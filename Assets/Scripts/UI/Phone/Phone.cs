@@ -16,9 +16,12 @@ public class Phone : SingletonMonoBehaviour<Phone>
 
     private Animator anim;
 
+    public Animator holderAnim;
+
     public float fadeTime = 1f;
 
     private bool phoneUp;
+    private bool fullScreen;
 
     private void Start()
     {
@@ -35,6 +38,16 @@ public class Phone : SingletonMonoBehaviour<Phone>
         if (Input.GetKeyUp(KeyCode.Space))
         {
             TogglePhone();
+        }
+
+        if (Input.GetKeyUp(KeyCode.F))
+        {
+            ToggleFullScreen();
+        }
+
+        if(phoneUp == false)
+        {
+            fullScreen = false;
         }
     }
 
@@ -77,5 +90,16 @@ public class Phone : SingletonMonoBehaviour<Phone>
 
         anim.SetBool("PhoneUp", phoneUp);
     }
+
+    private void ToggleFullScreen()
+    {
+        if(phoneUp != false)
+        {
+            fullScreen = !fullScreen;
+        }
+
+        holderAnim.SetBool("FullScreen", fullScreen);
+    }
+
 
 }
