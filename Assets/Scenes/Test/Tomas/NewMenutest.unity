@@ -7713,7 +7713,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b5f629026ff9c9468e60bf150533c64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelToLoad: PhotoZoneHouseTEst
+  LevelToLoad: main
   mainPanel: {fileID: 2038764092}
   creditPanel: {fileID: 732612099}
   play: {fileID: 1807417124}
