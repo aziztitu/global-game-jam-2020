@@ -5,11 +5,14 @@ using UnityEngine;
 public class TrashCan : MonoBehaviour
 {
     private ObjectPlacePoint objectPlacePoint;
+    private Animator animator;
 
     void Awake()
     {
         objectPlacePoint = GetComponent<ObjectPlacePoint>();
         objectPlacePoint.onObjectPlaced.AddListener(OnObjectPlaced);
+
+        animator = GetComponent<Animator>();
     }
 
     // Start is called before the first frame update
@@ -35,6 +38,8 @@ public class TrashCan : MonoBehaviour
             }
 
             Destroy(objectPlacePoint.holdingObject.gameObject);
+
+            animator.SetTrigger("trashThrown");
         }
     }
 }
