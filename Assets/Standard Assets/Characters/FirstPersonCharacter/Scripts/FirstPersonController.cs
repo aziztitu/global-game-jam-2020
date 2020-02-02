@@ -15,7 +15,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private float m_WalkSpeed;
         [SerializeField] private float m_RunSpeed;
         [SerializeField] [Range(0f, 1f)] private float m_RunstepLenghten;
-        [SerializeField] private float m_JumpSpeed;
         [SerializeField] private float m_StickToGroundForce;
         [SerializeField] private float m_GravityMultiplier;
         [SerializeField] private MouseLook m_MouseLook;
@@ -26,12 +25,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private LerpControlledBob m_JumpBob = new LerpControlledBob();
         [SerializeField] private float m_StepInterval;
         [SerializeField] private AudioClip[] m_FootstepSounds;    // an array of footstep sounds that will be randomly selected from.
-        [SerializeField] private AudioClip m_JumpSound;           // the sound played when character leaves the ground.
         [SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
 
         private Camera m_Camera;
         public CinemachineVirtualCamera vCam;
-        private bool m_Jump;
         private float m_YRotation;
         private Vector2 m_Input;
         private Vector3 m_MoveDir = Vector3.zero;
@@ -41,7 +38,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private Vector3 m_OriginalCameraPosition;
         private float m_StepCycle;
         private float m_NextStep;
-        private bool m_Jumping;
         private AudioSource m_AudioSource;
 
         // Use this for initialization
@@ -54,7 +50,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_HeadBob.Setup(vCam.transform, m_StepInterval);
             m_StepCycle = 0f;
             m_NextStep = m_StepCycle/2f;
-            m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , vCam.transform);
         }
@@ -65,19 +60,15 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             RotateView();
             // the jump state needs to read here to make sure it is not missed
-            if (!m_Jump)
-            {
-                m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
-            }
+        
 
             if (!m_PreviouslyGrounded && m_CharacterController.isGrounded)
             {
                 StartCoroutine(m_JumpBob.DoBobCycle());
                 PlayLandingSound();
                 m_MoveDir.y = 0f;
-                m_Jumping = false;
             }
-            if (!m_CharacterController.isGrounded && !m_Jumping && m_PreviouslyGrounded)
+            if (!m_CharacterController.isGrounded && m_PreviouslyGrounded)
             {
                 m_MoveDir.y = 0f;
             }
@@ -115,13 +106,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 m_MoveDir.y = -m_StickToGroundForce;
 
-                if (m_Jump)
-                {
-                    m_MoveDir.y = m_JumpSpeed;
-                    PlayJumpSound();
-                    m_Jump = false;
-                    m_Jumping = true;
-                }
             }
             else
             {
@@ -136,11 +120,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
         }
 
 
-        private void PlayJumpSound()
-        {
-            m_AudioSource.clip = m_JumpSound;
-            m_AudioSource.Play();
-        }
 
 
         private void ProgressStepCycle(float speed)
