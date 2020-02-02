@@ -102,7 +102,8 @@ public class FriendsManager : SingletonMonoBehaviour<FriendsManager>
 
                     onFriendActionPerformed?.Invoke(actionType, pickable.transform.position);
 
-                    pickable.rigidbody.AddForce(Random.onUnitSphere * Random.Range(minRearrangeObjectForce, maxRearrangeObjectForce));
+                    pickable.rigidbody.AddForce(Random.onUnitSphere *
+                                                Random.Range(minRearrangeObjectForce, maxRearrangeObjectForce));
                 }
 
                 break;

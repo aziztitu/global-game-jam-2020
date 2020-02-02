@@ -75,8 +75,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickUpInstruction: '''Left Click'' to pick up'
-  dropInstruction: '''Right Click'' to drop'
-  placeInstruction: '''Left Click'' to place'
+  dropInstruction: '''Right Click'' to throw/drop'
   onPickedUp:
     m_PersistentCalls:
       m_Calls: []

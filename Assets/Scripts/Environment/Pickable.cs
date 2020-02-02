@@ -11,7 +11,7 @@ public class Pickable : MonoBehaviour
     public bool hasObjectPlacePointInRadius => objectPlacePointInRadius != null && !objectPlacePointInRadius.isHoldingObject;
 
     public string pickUpInstruction = "'Left Click' to pick up";
-    public string dropInstruction = "'Right Click' to drop";
+    public string dropInstruction = "'Right Click' to throw/drop";
 
     public UnityEvent onPickedUp;
     public UnityEvent onDropped;

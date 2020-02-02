@@ -50,6 +50,7 @@ public class ObjectPlacePoint : MonoBehaviour
 
     public void OnPlaced(Pickable pickable)
     {
+        pickable.transform.rotation = Quaternion.identity;
         onObjectPlaced?.Invoke();
     }
 }
