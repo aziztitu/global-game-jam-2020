@@ -4,20 +4,33 @@ using UnityEngine;
 
 public class FriendRagdoll : MonoBehaviour
 {
-    public Transform hip;
+    public float delayBeforeSwitch = 10f;
 
-    public Pickable pickable;
-    public FriendModel friendModelToRevive;
+    [ReadOnly] public Pickable pickable;
+
+    [ReadOnly] public FriendModel friendModelToRevive;
+
+    [ReadOnly] public float timeElapsed = 0;
 
     // Start is called before the first frame update
     void Start()
     {
         pickable = GetComponent<Pickable>();
+        timeElapsed = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        hip.localPosition = Vector3.zero;
+        timeElapsed += Time.deltaTime;
+
+        if (timeElapsed >= delayBeforeSwitch)
+        {
+            if (!pickable.isHeld)
+            {
+                friendModelToRevive.Revive();
+                Destroy(gameObject);
+            }
+        }
     }
 }

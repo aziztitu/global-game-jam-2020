@@ -18,6 +18,7 @@ public class FriendModel : MonoBehaviour
     public GameObject ragdollPrefab;
 
     public bool isHidden = false;
+    public FriendRagdoll friendRagdoll = null;
 
     void Awake()
     {
@@ -32,7 +33,6 @@ public class FriendModel : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -50,10 +50,28 @@ public class FriendModel : MonoBehaviour
             var pickable = other.rigidbody.GetComponent<Pickable>();
             if (pickable && other.rigidbody.velocity.magnitude >= minVelocityToGetHit)
             {
+                print(other.rigidbody.velocity);
+
                 // Gets hit
                 // Instantiate ragdoll
-                Instantiate(ragdollPrefab, transform.position, transform.rotation).GetComponent<FriendRagdoll>();
+                friendRagdoll = Instantiate(ragdollPrefab, transform.position, transform.rotation)
+                    .GetComponentInChildren<FriendRagdoll>();
+
+                friendRagdoll.friendModelToRevive = this;
+
+                gameObject.SetActive(false);
             }
         }
+    }
+
+    public void Revive()
+    {
+        friendRagdoll = null;
+
+        transform.position = friendRagdoll.transform.position;
+        transform.rotation = friendRagdoll.transform.rotation;
+
+        gameObject.SetActive(true);
+        stateMachine.SwitchState(IdleState.Instance);
     }
 }
