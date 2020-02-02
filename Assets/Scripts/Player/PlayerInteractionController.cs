@@ -35,6 +35,11 @@ public class PlayerInteractionController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (PauseMenu.Instance.isPaused)
+        {
+            return;
+        }
+
         RefreshPickableOnFocus();
         RefreshPickableOnHand();
         CheckAndFixObject();
@@ -84,17 +89,17 @@ public class PlayerInteractionController : MonoBehaviour
                 pickableOnHand = pickableOnFocus;
                 pickableOnHand.OnPickedUp(this);
             }
-            else if (isHoldingPickable && pickableOnHand.hasObjectPlacePointInRadius)
+            /*else if (isHoldingPickable && pickableOnHand.hasObjectPlacePointInRadius)
             {
                 pickableOnHand.OnDropped();
                 pickableOnHand = null;
-            }
+            }*/
         }
 
         if (isHoldingPickable)
         {
             var cam = CameraRigManager.Instance.brain.OutputCamera;
-
+            
             if (Input.GetButtonDown("Throw"))
             {
                 curThrowForce = 0;

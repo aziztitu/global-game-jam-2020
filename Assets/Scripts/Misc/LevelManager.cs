@@ -15,6 +15,10 @@ public class LevelManager : SingletonMonoBehaviour<LevelManager>
     {
         base.Awake();
 
+        Time.timeScale = 1;
+
+        HelperUtilities.UpdateCursorLock(true);
+
         curParentsDistance = initialParentsDistance;
     }
 

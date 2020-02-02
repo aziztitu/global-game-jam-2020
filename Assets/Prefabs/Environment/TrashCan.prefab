@@ -65,7 +65,7 @@ MonoBehaviour:
   holder: {fileID: 1187995489062971332}
   ui: {fileID: 2560043804469537140}
   maxDisplayDistance: 5
-  placeInstruction: '''Left Click'' to trash object'
+  placeInstruction: '''Right Click'' to trash object'
   correctObjectData: {fileID: 0}
   onObjectPlaced:
     m_PersistentCalls:
