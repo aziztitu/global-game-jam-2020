@@ -17,8 +17,12 @@ public class TaskManager : SingletonMonoBehaviour<TaskManager>
     // Update is called once per frame
     void Update()
     {
-        // rearrangeObjectsTask.CalculateTaskStatus();
-        // fixObjectsTask.CalculateTaskStatus();
+    }
+
+    public void CalculateTaskStatuses()
+    {
+        rearrangeObjectsTask.CalculateTaskStatus();
+        fixObjectsTask.CalculateTaskStatus();
         trashCleaningTask.CalculateTaskStatus();
     }
 }

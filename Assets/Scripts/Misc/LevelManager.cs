@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : SingletonMonoBehaviour<LevelManager>
 {
@@ -9,6 +10,8 @@ public class LevelManager : SingletonMonoBehaviour<LevelManager>
 
     public float initialParentsDistance = 100;
     [Tooltip("Per Minute")] public float parentsTravelSpeed = 60;
+    public string mainMenuScene = "Main Menu";
+
     public float curParentsDistance { get; private set; } = 0;
 
     new void Awake()
@@ -37,5 +40,20 @@ public class LevelManager : SingletonMonoBehaviour<LevelManager>
     {
         curParentsDistance -= (parentsTravelSpeed / 60f) * Time.deltaTime;
         curParentsDistance = Mathf.Clamp(curParentsDistance, 0, initialParentsDistance);
+
+        if (!EndScreen.Instance.isShowing && curParentsDistance <= 0)
+        {
+            EndScreen.Instance.Show();
+        }
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene(mainMenuScene);
     }
 }
