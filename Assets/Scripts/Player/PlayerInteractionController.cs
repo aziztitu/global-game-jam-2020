@@ -117,7 +117,7 @@ public class PlayerInteractionController : MonoBehaviour
                 {
                     pickableOnHand.OnDropped();
 
-                    pickableOnHand.rigidbody.AddForce(cam.transform.forward * curThrowForce);
+                    pickableOnHand.rigidbody.AddForce(cam.transform.forward * curThrowForce * pickableOnHand.dropForceMultiplier);
 
                     pickableOnHand = null;
                     curThrowForce = -1;

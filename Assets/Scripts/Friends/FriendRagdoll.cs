@@ -26,7 +26,7 @@ public class FriendRagdoll : MonoBehaviour
 
         if (timeElapsed >= delayBeforeSwitch)
         {
-            if (!pickable.isHeld)
+            if (friendModelToRevive && !pickable.isHeld)
             {
                 friendModelToRevive.Revive();
                 Destroy(gameObject);

@@ -2905,7 +2905,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickUpInstruction: '''Left Click'' to pick up'
   dropInstruction: '''Right Click'' to throw/drop'
-  dropForceMultiplier: 1
+  dropForceMultiplier: 10
   onPickedUp:
     m_PersistentCalls:
       m_Calls: []

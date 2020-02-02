@@ -66,12 +66,17 @@ public class FriendModel : MonoBehaviour
 
     public void Revive()
     {
+        transform.position = friendRagdoll.transform.position;
+
         friendRagdoll = null;
 
-        transform.position = friendRagdoll.transform.position;
-        transform.rotation = friendRagdoll.transform.rotation;
-
         gameObject.SetActive(true);
+
+        if (!navMeshAgent.isOnNavMesh)
+        {
+            transform.position = WaypointManager.Instance.GetRandomWaypoint().position;
+        }
+
         stateMachine.SwitchState(IdleState.Instance);
     }
 }
