@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5116506270916784255}
   - component: {fileID: 8778519027424319806}
   - component: {fileID: 4026742300002883471}
+  - component: {fileID: 4564871020322205685}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -45,6 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d671a558db6b76438eaa86aaeaf0b25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialParentsDistance: 100
+  parentsTravelSpeed: 60
 --- !u!114 &8778519027424319806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57,8 +60,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af4447daf68b1a94d8912131ccd60e3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rearrangeObjectsTask:
-    objectsRearranged: 0
 --- !u!114 &4026742300002883471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,5 +70,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f32723eed1a0af4181a434950ff81c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  placementPointsRoot: {fileID: 0}
+  findPlacementPointsOnAwake: 1
+  placementPoints: []
+--- !u!114 &4564871020322205685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2692109431106633458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c16377b70ef86d43ba5e8ae5db19eb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

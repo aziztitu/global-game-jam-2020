@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class FriendModel : MonoBehaviour
 {
+    public StateMachine<FriendModel> stateMachine;
+
+    void Awake()
+    {
+        stateMachine = new StateMachine<FriendModel>(this);
+        stateMachine.SwitchState(IdleState.Instance);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +21,6 @@ public class FriendModel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        stateMachine.Update();
     }
 }
