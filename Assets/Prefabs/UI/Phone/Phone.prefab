@@ -213,6 +213,8 @@ MonoBehaviour:
   ImageParent: {fileID: 3408914008962288131}
   animTime: 0.25
   currentNumber: {fileID: 3408914007798318911}
+  displayText: {fileID: 3408914008227630614}
+  defaultText: Blank
   ImagePrefab: {fileID: 112165363855033947, guid: 40bc9eeeb8bab8e42a3d99d834d49f1c,
     type: 3}
 --- !u!1 &2861045987380844393
