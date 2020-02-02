@@ -22,12 +22,14 @@ public class FriendsManager : SingletonMonoBehaviour<FriendsManager>
     public float maxActionInterval;
     [Range(0, 1)] public float actionProbability;
     public float actionMinDistanceFromPlayer = 5f;
+    public float minRearrangeObjectForce = 100f;
+    public float maxRearrangeObjectForce = 200f;
 
     private float nextActionTime = 0;
 
     public int friendsCount { get; private set; }
 
-    public event Action<ActionType, Vector3> onFriendActionPerformed; 
+    public event Action<ActionType, Vector3> onFriendActionPerformed;
 
     new void Awake()
     {
@@ -100,13 +102,50 @@ public class FriendsManager : SingletonMonoBehaviour<FriendsManager>
 
                     onFriendActionPerformed?.Invoke(actionType, pickable.transform.position);
 
-                    // TODO: Maybe add some force on pickable
+                    pickable.rigidbody.AddForce(Random.onUnitSphere * Random.Range(minRearrangeObjectForce, maxRearrangeObjectForce));
                 }
 
                 break;
             case ActionType.Litter:
+                if (TaskManager.Instance.trashCleaningTask.canSpawnTrash)
+                {
+                    var possibleTransforms = ObjectPlacementManager.Instance.placementPoints.Where(point =>
+                    {
+                        float distanceFromPlayer =
+                            Vector3.Distance(point.position, PlayerModel.Instance.transform.position);
+
+                        return distanceFromPlayer >= actionMinDistanceFromPlayer;
+                    }).ToList();
+
+                    if (possibleTransforms.Count > 0)
+                    {
+                        var selectedTransform = possibleTransforms[Random.Range(0, possibleTransforms.Count)];
+                        Instantiate(TaskManager.Instance.trashCleaningTask.GetRandomTrashPrefab(),
+                            selectedTransform.position, selectedTransform.rotation);
+
+                        onFriendActionPerformed?.Invoke(actionType, selectedTransform.position);
+                    }
+                }
+
                 break;
             case ActionType.MakeAMess:
+                var possibleFixableObjects = TaskManager.Instance.fixObjectsTask.allFixableObjects.Where(
+                    fixableObject =>
+                    {
+                        float distanceFromPlayer =
+                            Vector3.Distance(fixableObject.transform.position, PlayerModel.Instance.transform.position);
+
+                        return distanceFromPlayer >= actionMinDistanceFromPlayer && fixableObject.isFixed;
+                    }).ToList();
+
+                if (possibleFixableObjects.Count > 0)
+                {
+                    var selectedFixableObject = possibleFixableObjects[Random.Range(0, possibleFixableObjects.Count)];
+                    selectedFixableObject.Break();
+
+                    onFriendActionPerformed?.Invoke(actionType, selectedFixableObject.transform.position);
+                }
+
                 break;
         }
 

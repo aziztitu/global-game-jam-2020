@@ -2929,16 +2929,6 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5206650258015799334, guid: 328df857ffe26fb49892bacd3f2f4b7d,
-        type: 3}
-      propertyPath: minActionInterval
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 5206650258015799334, guid: 328df857ffe26fb49892bacd3f2f4b7d,
-        type: 3}
-      propertyPath: maxActionInterval
-      value: 25
-      objectReference: {fileID: 0}
     - target: {fileID: 5309478772420055750, guid: 328df857ffe26fb49892bacd3f2f4b7d,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -3174,6 +3164,17 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8410008831248102482, guid: 328df857ffe26fb49892bacd3f2f4b7d,
+        type: 3}
+      propertyPath: trashCleaningTask.trashPrefabs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8410008831248102482, guid: 328df857ffe26fb49892bacd3f2f4b7d,
+        type: 3}
+      propertyPath: trashCleaningTask.trashPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 8490948482182393736, guid: 46f1411d96dc76141907f5924175ec8e,
+        type: 3}
     - target: {fileID: 8520733516321633497, guid: 328df857ffe26fb49892bacd3f2f4b7d,
         type: 3}
       propertyPath: m_textInfo.characterCount
