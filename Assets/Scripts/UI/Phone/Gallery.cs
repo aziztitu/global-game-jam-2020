@@ -12,6 +12,8 @@ public class Gallery : SingletonMonoBehaviour<Gallery>
     public float animTime = 2f;
     private Transform[] ImageObj;
     public TextMeshProUGUI currentNumber;
+    public TextMeshProUGUI displayText;
+    public string defaultText;
     private int currentIndex = 0;
 
     public GameObject ImagePrefab;
@@ -19,16 +21,21 @@ public class Gallery : SingletonMonoBehaviour<Gallery>
 
     private void Start()
     {
-        PopulateGallery();
+        PopulateGallery(defaultText);
     }
 
-    public void NewPhotoSet(Image[] set)
+    public void NewPhotoSet(Sprite[] imgs, string caption)
     {
+        currentImages = imgs;
+        HelperExtensions.DestroyAllChildren(ImageParent.transform);
+        PopulateGallery(caption);
 
     }
 
-    private void PopulateGallery()
+    private void PopulateGallery(string text)
     {
+        displayText.text = text;
+
         foreach (Sprite image in currentImages)
         {
             //spawn game object
