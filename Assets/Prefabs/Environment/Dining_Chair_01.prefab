@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5239883862031110048}
   - component: {fileID: 8595718705816825833}
   - component: {fileID: 3672551548040163562}
+  - component: {fileID: 9037924166569746722}
   m_Layer: 0
   m_Name: Dining_Chair_01
   m_TagString: Untagged
@@ -79,3 +80,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &9037924166569746722
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7584036017808378399}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7390016290139085747, guid: aa869d260df5cfe4694ba9dfaccb15b6, type: 3}

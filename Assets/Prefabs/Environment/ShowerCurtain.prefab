@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 415139828799143757}
   - component: {fileID: 6165925056183557523}
   - component: {fileID: 7664701800266290833}
+  - component: {fileID: 7673438073255239164}
   m_Layer: 0
   m_Name: Shower_Curtain_Gravity1
   m_TagString: Untagged
@@ -79,6 +80,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &7673438073255239164
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451931213676473128}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1503465881145535444, guid: aa869d260df5cfe4694ba9dfaccb15b6, type: 3}
 --- !u!1 &3520691744797852797
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,6 +105,7 @@ GameObject:
   - component: {fileID: 6149617695110813906}
   - component: {fileID: 656431695916488015}
   - component: {fileID: 8654089728287688986}
+  - component: {fileID: 4569122850068935955}
   m_Layer: 0
   m_Name: Shower_Curtain_Rod
   m_TagString: Untagged
@@ -158,6 +174,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4569122850068935955
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3520691744797852797}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -796732066124510320, guid: aa869d260df5cfe4694ba9dfaccb15b6, type: 3}
 --- !u!1 &6320433193685883572
 GameObject:
   m_ObjectHideFlags: 0

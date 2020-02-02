@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2929785653701997461}
   - component: {fileID: 7494105185594854305}
   - component: {fileID: 6244410139167083528}
+  - component: {fileID: 5482240453469760324}
   m_Layer: 0
   m_Name: hinge_2
   m_TagString: Untagged
@@ -79,6 +80,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &5482240453469760324
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129113628183519989}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 144948220739311429, guid: 1c22ceb34827d214a80b547585ea89c3, type: 3}
 --- !u!1 &822297041227925928
 GameObject:
   m_ObjectHideFlags: 0
@@ -127,6 +142,7 @@ GameObject:
   - component: {fileID: 2272734891917182089}
   - component: {fileID: 2877948479143419049}
   - component: {fileID: 6249679340561150992}
+  - component: {fileID: 1396320882647170578}
   m_Layer: 0
   m_Name: hinge_4
   m_TagString: Untagged
@@ -195,6 +211,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &1396320882647170578
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1685311960608466323}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -715458053856917240, guid: 1c22ceb34827d214a80b547585ea89c3, type: 3}
 --- !u!1 &1829319226748610837
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,6 +236,7 @@ GameObject:
   - component: {fileID: 789656716129494316}
   - component: {fileID: 7598945172927596348}
   - component: {fileID: 3124692545139406225}
+  - component: {fileID: 1866411290299285539}
   m_Layer: 0
   m_Name: Drawer
   m_TagString: Untagged
@@ -274,6 +305,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &1866411290299285539
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829319226748610837}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -4773355822595451164, guid: 1c22ceb34827d214a80b547585ea89c3, type: 3}
 --- !u!1 &2609291197873548570
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,6 +330,7 @@ GameObject:
   - component: {fileID: 6300102793201811026}
   - component: {fileID: 6787009280430945807}
   - component: {fileID: 6279136487602860084}
+  - component: {fileID: 3887825775417956916}
   m_Layer: 0
   m_Name: hinge
   m_TagString: Untagged
@@ -353,6 +399,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &3887825775417956916
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2609291197873548570}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -649114566144498003, guid: 1c22ceb34827d214a80b547585ea89c3, type: 3}
 --- !u!1 &5647185411998790307
 GameObject:
   m_ObjectHideFlags: 0
@@ -364,6 +424,7 @@ GameObject:
   - component: {fileID: 8926056547845681409}
   - component: {fileID: 2015706580603339018}
   - component: {fileID: 8644062498604522085}
+  - component: {fileID: 7319451257494304799}
   m_Layer: 0
   m_Name: hinge_3
   m_TagString: Untagged
@@ -432,6 +493,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &7319451257494304799
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5647185411998790307}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2660315023338141612, guid: 1c22ceb34827d214a80b547585ea89c3, type: 3}
 --- !u!1 &7791606267213019360
 GameObject:
   m_ObjectHideFlags: 0
@@ -443,6 +518,7 @@ GameObject:
   - component: {fileID: 5122234687747578203}
   - component: {fileID: 2434084134777910714}
   - component: {fileID: 6092777183064212613}
+  - component: {fileID: 2313959153191729803}
   m_Layer: 0
   m_Name: Sink
   m_TagString: Untagged
@@ -511,6 +587,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &2313959153191729803
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7791606267213019360}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3671124377080654647, guid: 1c22ceb34827d214a80b547585ea89c3, type: 3}
 --- !u!1 &8027263390381424167
 GameObject:
   m_ObjectHideFlags: 0
@@ -522,6 +612,7 @@ GameObject:
   - component: {fileID: 4926629284106566543}
   - component: {fileID: 9141659681107756424}
   - component: {fileID: 4658255160259506142}
+  - component: {fileID: 5010168602790501176}
   m_Layer: 0
   m_Name: faucet
   m_TagString: Untagged
@@ -590,3 +681,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &5010168602790501176
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8027263390381424167}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8361362048749171208, guid: 1c22ceb34827d214a80b547585ea89c3, type: 3}

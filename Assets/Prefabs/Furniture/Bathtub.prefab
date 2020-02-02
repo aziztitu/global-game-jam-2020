@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9219912524405627244}
   - component: {fileID: 2919143155567997641}
   - component: {fileID: 3965968855183017599}
+  - component: {fileID: 8878974020286499415}
   m_Layer: 0
   m_Name: Bathtub
   m_TagString: Untagged
@@ -79,3 +80,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &8878974020286499415
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7973967265035305277}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2457393760949967816, guid: aa869d260df5cfe4694ba9dfaccb15b6, type: 3}

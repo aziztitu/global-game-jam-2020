@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 856130767667832964}
   - component: {fileID: 38219581273957003}
   - component: {fileID: 1179905968143423580}
+  - component: {fileID: 5906637450901233537}
   m_Layer: 0
   m_Name: Dining_Chair_03
   m_TagString: Untagged
@@ -79,6 +80,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &5906637450901233537
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199247024438607391}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4047750946414963442, guid: aa869d260df5cfe4694ba9dfaccb15b6, type: 3}
 --- !u!1 &1269623444621162119
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,6 +105,7 @@ GameObject:
   - component: {fileID: 6984690053678444806}
   - component: {fileID: 5801106534569658924}
   - component: {fileID: 7609480527865963494}
+  - component: {fileID: 2940056626761871331}
   m_Layer: 0
   m_Name: Dining_Chair_05
   m_TagString: Untagged
@@ -158,6 +174,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &2940056626761871331
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269623444621162119}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3321251253905925206, guid: aa869d260df5cfe4694ba9dfaccb15b6, type: 3}
 --- !u!1 &1392007319726654624
 GameObject:
   m_ObjectHideFlags: 0
@@ -210,6 +240,7 @@ GameObject:
   - component: {fileID: 6372885520090928499}
   - component: {fileID: 6836641839406598272}
   - component: {fileID: 291509809766042833}
+  - component: {fileID: 7184503572541414898}
   m_Layer: 0
   m_Name: Dining_Chair_02
   m_TagString: Untagged
@@ -278,6 +309,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &7184503572541414898
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2547522566406159722}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2928423507902129729, guid: aa869d260df5cfe4694ba9dfaccb15b6, type: 3}
 --- !u!1 &3818522805132541649
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,6 +334,7 @@ GameObject:
   - component: {fileID: 4644447933989660670}
   - component: {fileID: 1118651023212203173}
   - component: {fileID: 7568869367878291838}
+  - component: {fileID: 3692855432758684541}
   m_Layer: 0
   m_Name: Dining_Chair_06
   m_TagString: Untagged
@@ -357,6 +403,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &3692855432758684541
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3818522805132541649}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8850964713947792889, guid: aa869d260df5cfe4694ba9dfaccb15b6, type: 3}
 --- !u!1 &5458200764265416762
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,6 +428,7 @@ GameObject:
   - component: {fileID: 7973314687787066656}
   - component: {fileID: 6545829523454067427}
   - component: {fileID: 216475107547465467}
+  - component: {fileID: 2975187224282335953}
   m_Layer: 0
   m_Name: Dining_Table
   m_TagString: Untagged
@@ -438,6 +499,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &2975187224282335953
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5458200764265416762}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3995249018271741593, guid: aa869d260df5cfe4694ba9dfaccb15b6, type: 3}
 --- !u!1 &6220094631547100501
 GameObject:
   m_ObjectHideFlags: 0
@@ -449,6 +524,7 @@ GameObject:
   - component: {fileID: 3206657159420119032}
   - component: {fileID: 5537749793751860390}
   - component: {fileID: 3039127971720395528}
+  - component: {fileID: 4996717203901076999}
   m_Layer: 0
   m_Name: Dining_Chair_04
   m_TagString: Untagged
@@ -517,6 +593,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4996717203901076999
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6220094631547100501}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2829315014944391091, guid: aa869d260df5cfe4694ba9dfaccb15b6, type: 3}
 --- !u!1 &6375392638281923549
 GameObject:
   m_ObjectHideFlags: 0
@@ -528,6 +618,7 @@ GameObject:
   - component: {fileID: 1868351548677044853}
   - component: {fileID: 3395989550884450269}
   - component: {fileID: 6496136329098232713}
+  - component: {fileID: 8637116604053587535}
   m_Layer: 0
   m_Name: Dining_Chair_08
   m_TagString: Untagged
@@ -596,6 +687,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &8637116604053587535
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6375392638281923549}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8936032618559464826, guid: aa869d260df5cfe4694ba9dfaccb15b6, type: 3}
 --- !u!1 &8242253420998320000
 GameObject:
   m_ObjectHideFlags: 0
@@ -607,6 +712,7 @@ GameObject:
   - component: {fileID: 5402637361887105747}
   - component: {fileID: 8845451161643273514}
   - component: {fileID: 3440374576035406213}
+  - component: {fileID: 8501713132169485186}
   m_Layer: 0
   m_Name: Vase_01
   m_TagString: Untagged
@@ -675,6 +781,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &8501713132169485186
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8242253420998320000}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -785048428816109691, guid: aa869d260df5cfe4694ba9dfaccb15b6, type: 3}
 --- !u!1 &8417114993465848185
 GameObject:
   m_ObjectHideFlags: 0
@@ -686,6 +806,7 @@ GameObject:
   - component: {fileID: 128653455589302060}
   - component: {fileID: 575074206132153479}
   - component: {fileID: 6162539180571290889}
+  - component: {fileID: 1517728820737570980}
   m_Layer: 0
   m_Name: Dining_Chair_07
   m_TagString: Untagged
@@ -754,6 +875,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &1517728820737570980
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8417114993465848185}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 7074410460890027950, guid: aa869d260df5cfe4694ba9dfaccb15b6, type: 3}
 --- !u!1 &9175121245329852445
 GameObject:
   m_ObjectHideFlags: 0
@@ -765,6 +900,7 @@ GameObject:
   - component: {fileID: 4659556335542514582}
   - component: {fileID: 4569403461703597725}
   - component: {fileID: 4792313255787877971}
+  - component: {fileID: 6916174965053021904}
   m_Layer: 0
   m_Name: Vase_02
   m_TagString: Untagged
@@ -833,6 +969,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &6916174965053021904
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9175121245329852445}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6524547825265197678, guid: aa869d260df5cfe4694ba9dfaccb15b6, type: 3}
 --- !u!1001 &6289908959348889352
 PrefabInstance:
   m_ObjectHideFlags: 0

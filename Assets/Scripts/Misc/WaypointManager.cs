@@ -16,7 +16,7 @@ public class WaypointManager : SingletonMonoBehaviour<WaypointManager>
 
         if (findWaypointsOnAwake)
         {
-            FindPlacementPoints();
+            FindWaypoints();
         }
         waypointsRandomizer = new Randomizer<Transform>(waypoints);
     }
@@ -31,7 +31,7 @@ public class WaypointManager : SingletonMonoBehaviour<WaypointManager>
     {
     }
 
-    private void FindPlacementPoints()
+    private void FindWaypoints()
     {
         if (waypointsRoot)
         {
@@ -40,7 +40,7 @@ public class WaypointManager : SingletonMonoBehaviour<WaypointManager>
         }
     }
 
-    public Transform GetRandomPlacementPoint()
+    public Transform GetRandomWaypoint()
     {
         return waypointsRandomizer.GetRandomItem();
     }
