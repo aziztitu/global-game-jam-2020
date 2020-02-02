@@ -145,7 +145,7 @@ public static class HelperExtensions
         List<Transform> list = new List<Transform>();
         for (int i = 0; i < self.childCount; i++)
         {
-            list.Add(self.GetChild(i));
+            list.AddRange(self.GetChild(i).GetComponentsInChildren<Transform>());
         }
 
         return list;

@@ -3,66 +3,47 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class PauseMenu : SingletonMonoBehaviour<PauseMenu>
+public class EndScreen : SingletonMonoBehaviour<EndScreen>
 {
-    public bool isPaused => pauseCanvas.gameObject.activeInHierarchy;
+    public bool isShowing => canvas.activeInHierarchy;
 
-    public Canvas pauseCanvas;
+    public GameObject canvas;
     public float transitionDuration = 0.5f;
+
+    public TaskReportItem rearrangeTaskItem;
+    public TaskReportItem fixObjectsTaskItem;
+    public TaskReportItem trashCleaningTaskItem;
+    public TaskReportItem hideFriendsTaskItem;
 
     // Start is called before the first frame update
     void Start()
     {
-        pauseCanvas.gameObject.SetActive(false);
+        canvas.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Cancel"))
-        {
-            TogglePause();
-        }
+        
     }
 
-    public void TogglePause()
-    {
-        if (isPaused)
-        {
-            Resume();
-        }
-        else
-        {
-            Pause();
-        }
-    }
-
-    public void Pause()
+    public void Show()
     {
         Time.timeScale = 0;
-
         HelperUtilities.UpdateCursorLock(false);
-        ShowScreen(pauseCanvas.gameObject);
+
+        RefreshTaskReports();
+        ShowScreen(canvas);
     }
 
-    public void Resume()
+    void RefreshTaskReports()
     {
-        Time.timeScale = 1;
+        TaskManager.Instance.CalculateTaskStatuses();
 
-        HelperUtilities.UpdateCursorLock(true);
-        HideScreen(pauseCanvas.gameObject);
-    }
-
-    public void Restart()
-    {
-        LevelManager.Instance.Restart();
-    }
-
-    public void GoToMainMenu()
-    {
-        LevelManager.Instance.GoToMainMenu();
+        rearrangeTaskItem.value.text = $"{TaskManager.Instance.rearrangeObjectsTask.objectsOutOfPlace}";
+        fixObjectsTaskItem.value.text = $"{TaskManager.Instance.fixObjectsTask.objectsNotFixed}";
+        trashCleaningTaskItem.value.text = $"{TaskManager.Instance.trashCleaningTask.trashNotThrown}";
     }
 
     void ShowScreen(GameObject screen)
@@ -93,5 +74,10 @@ public class PauseMenu : SingletonMonoBehaviour<PauseMenu>
 
         preSeq.AppendCallback(() => { fadeOutSeq.Play(); });
         preSeq.Play();
+    }
+
+    public void GoToMainMenu()
+    {
+        LevelManager.Instance.GoToMainMenu();
     }
 }
