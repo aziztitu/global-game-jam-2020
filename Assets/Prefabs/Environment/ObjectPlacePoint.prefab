@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4129060186076754904}
   - component: {fileID: 7857515548505117347}
   m_Layer: 0
-  m_Name: RearrangableObjectOriginalPoint
+  m_Name: ObjectPlacePoint
   m_TagString: ObjectPlacePoint
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -49,7 +49,11 @@ MonoBehaviour:
   holder: {fileID: 4129060186641194045}
   ui: {fileID: 772050128439677581}
   maxDisplayDistance: 5
+  placeInstruction: '''Right Click'' to place'
   correctObjectData: {fileID: 0}
+  onObjectPlaced:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!135 &7857515548505117347
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -61,7 +65,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4129060186641194042
 GameObject:
