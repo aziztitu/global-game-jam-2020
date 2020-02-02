@@ -66,7 +66,10 @@ public class FriendsManager : SingletonMonoBehaviour<FriendsManager>
         for (int i = 0; i < friendsCount; i++)
         {
             var spawnTransform = WaypointManager.Instance.GetRandomWaypoint();
-            Instantiate(friendPrefab, spawnTransform.position, spawnTransform.rotation);
+            if (spawnTransform)
+            {
+                Instantiate(friendPrefab, spawnTransform.position, spawnTransform.rotation);
+            }
         }
     }
 

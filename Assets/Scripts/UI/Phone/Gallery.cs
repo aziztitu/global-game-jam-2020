@@ -1,4 +1,5 @@
-﻿using DG.Tweening;
+﻿using System.Collections.Generic;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -36,22 +37,24 @@ public class Gallery : SingletonMonoBehaviour<Gallery>
     {
         displayText.text = text;
 
+        var imageList = new List<Transform>();
         foreach (Sprite image in currentImages)
         {
             //spawn game object
-            var imgSpawn = Instantiate(ImagePrefab, ImageParent.transform) as GameObject;
+            var imgSpawn = Instantiate(ImagePrefab, ImageParent.transform).GetComponent<Image>();
+            imgSpawn.sprite = image;
+            imageList.Add(imgSpawn.transform);
         }
 
+        ImageObj = imageList.ToArray();
 
-        ImageObj = HelperExtensions.GetChildrenOnly(ImageParent.transform).ToArray();
-
-        for (int i = 0; i < ImageObj.Length; i++)
+        /*for (int i = 0; i < ImageObj.Length; i++)
         {
             if (ImageObj[i].GetComponent<Image>() != null)
             {
                 ImageObj[i].GetComponent<Image>().sprite = currentImages[i];
             }
-        }
+        }*/
     }
 
     private void Update()

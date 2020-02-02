@@ -2289,6 +2289,11 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1507903751512641553, guid: 328df857ffe26fb49892bacd3f2f4b7d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2284277336549335888, guid: 328df857ffe26fb49892bacd3f2f4b7d,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -3374,47 +3379,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TrashCan
-      objectReference: {fileID: 0}
-    - target: {fileID: 1187995489056426031, guid: 8309b88d5daaf0a4886c5eb8e5ce487e,
-        type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000,
-        type: 0}
-    - target: {fileID: 1187995489056426031, guid: 8309b88d5daaf0a4886c5eb8e5ce487e,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1187995489062971331, guid: 8309b88d5daaf0a4886c5eb8e5ce487e,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1195344245300161325, guid: 8309b88d5daaf0a4886c5eb8e5ce487e,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3024522680955648204, guid: 8309b88d5daaf0a4886c5eb8e5ce487e,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4711525833730071653, guid: 8309b88d5daaf0a4886c5eb8e5ce487e,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8717056258316213061, guid: 8309b88d5daaf0a4886c5eb8e5ce487e,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8837141925663012148, guid: 8309b88d5daaf0a4886c5eb8e5ce487e,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8309b88d5daaf0a4886c5eb8e5ce487e, type: 3}

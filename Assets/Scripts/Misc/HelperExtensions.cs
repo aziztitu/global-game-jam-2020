@@ -122,20 +122,17 @@ public static class HelperExtensions
 
     public static void DestroyAllChildren(this Transform self, bool immediate = false)
     {
-        while (self.childCount > 0)
+        for (int i = 0; i < self.childCount; i++)
         {
-            for (int i = 0; i < self.childCount; i++)
-            {
-                var child = self.GetChild(i);
+            var child = self.GetChild(i);
 
-                if (immediate)
-                {
-                    GameObject.DestroyImmediate(child.gameObject);
-                }
-                else
-                {
-                    GameObject.Destroy(child.gameObject);
-                }
+            if (immediate)
+            {
+                GameObject.DestroyImmediate(child.gameObject);
+            }
+            else
+            {
+                GameObject.Destroy(child.gameObject);
             }
         }
     }
@@ -145,7 +142,7 @@ public static class HelperExtensions
         List<Transform> list = new List<Transform>();
         for (int i = 0; i < self.childCount; i++)
         {
-            list.AddRange(self.GetChild(i).GetComponentsInChildren<Transform>());
+            list.Add(self.GetChild(i));
         }
 
         return list;

@@ -11,6 +11,7 @@ public class LevelManager : SingletonMonoBehaviour<LevelManager>
     public float initialParentsDistance = 100;
     [Tooltip("Per Minute")] public float parentsTravelSpeed = 60;
     public string mainMenuScene = "Main Menu";
+    public Camera housePictureCamera;
 
     public float curParentsDistance { get; private set; } = 0;
 

@@ -34,7 +34,12 @@ public class RearrangableObject : MonoBehaviour
     void Rearrange()
     {
         transform.parent = null;
-        transform.position = ObjectPlacementManager.Instance.GetRandomPlacementPoint().position;
+
+        var newTransform = ObjectPlacementManager.Instance.GetRandomPlacementPoint();
+        if (newTransform)
+        {
+            transform.position = newTransform.position;
+        }
     }
 
     void SaveOriginalPosition(bool spawnOriginalPoint = true)
