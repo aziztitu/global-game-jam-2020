@@ -17,8 +17,10 @@ public class FriendModel : MonoBehaviour
     public Animator animator;
     public GameObject ragdollPrefab;
 
-    public bool isHidden = false;
+    public bool isHidden => gameObject.activeInHierarchy;
     public FriendRagdoll friendRagdoll = null;
+
+    public bool enableRagdolling = true;
 
     void Awake()
     {
@@ -43,6 +45,11 @@ public class FriendModel : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
+        if (!enableRagdolling)
+        {
+            return;
+        }
+
         print(other.gameObject);
 
         if (other.rigidbody)

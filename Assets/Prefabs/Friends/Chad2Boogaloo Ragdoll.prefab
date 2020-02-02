@@ -2838,6 +2838,7 @@ GameObject:
   - component: {fileID: 1427192925986976729}
   - component: {fileID: 2659287617559423088}
   - component: {fileID: 8868666826961202877}
+  - component: {fileID: 5335889584892480968}
   m_Layer: 0
   m_Name: Hips_Jnt
   m_TagString: Untagged
@@ -2928,6 +2929,22 @@ MonoBehaviour:
   pickable: {fileID: 0}
   friendModelToRevive: {fileID: 0}
   timeElapsed: 0
+--- !u!208 &5335889584892480968
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8887093400669835277}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 0
+  m_Extents: {x: 0.015, y: 0.0125, z: 0.015}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &9029841957853882315
 GameObject:
   m_ObjectHideFlags: 0

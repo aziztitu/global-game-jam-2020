@@ -3106,7 +3106,7 @@ PrefabInstance:
     - target: {fileID: 5360604802241731859, guid: 328df857ffe26fb49892bacd3f2f4b7d,
         type: 3}
       propertyPath: initialParentsDistance
-      value: 500
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5559882264864429244, guid: 328df857ffe26fb49892bacd3f2f4b7d,
         type: 3}

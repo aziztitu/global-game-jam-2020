@@ -21,6 +21,10 @@ public class TaskManager : SingletonMonoBehaviour<TaskManager>
     public int worstTrashLeft = 25;
     public float trashWeight = 0.3f;
 
+    public int bestFriendsLeft = 2;
+    public int worstFriendsLeft = 6;
+    public float friendsWeight = 0.3f;
+
     [ReadOnly] public float score;
 
     public string rank
@@ -71,12 +75,14 @@ public class TaskManager : SingletonMonoBehaviour<TaskManager>
         rearrangeObjectsTask.CalculateTaskStatus();
         fixObjectsTask.CalculateTaskStatus();
         trashCleaningTask.CalculateTaskStatus();
+        hideFriendsTask.CalculateTaskStatus();
 
         score = 0;
         score += HelperUtilities.Remap(rearrangeObjectsTask.objectsOutOfPlace, bestRearrangeLeft, worstRearrangeLeft, rearrangeWeight,
             0);
         score += HelperUtilities.Remap(fixObjectsTask.objectsNotFixed, bestUnfixedLeft, worstUnfixedLeft, fixWeight, 0);
         score += HelperUtilities.Remap(trashCleaningTask.trashNotThrown, bestTrashLeft, worstTrashLeft, trashWeight, 0);
+        score += HelperUtilities.Remap(hideFriendsTask.friendsNotHidden, bestFriendsLeft, worstFriendsLeft, friendsWeight, 0);
 
         score = Mathf.Clamp01(score);
     }
