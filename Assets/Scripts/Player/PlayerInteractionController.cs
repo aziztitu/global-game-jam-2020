@@ -2,17 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerPickController : MonoBehaviour
+public class PlayerInteractionController : MonoBehaviour
 {
     public bool isHoldingPickable => pickableOnHand != null;
     public bool isFocusedOnPickable => pickableOnFocus != null;
+    public bool isFocusedOnFixableObject => fixableObjectOnFocus != null;
 
     public Transform pickableHolder;
+
+    public float maxInteractionDistance = 5;
+    public float pickUpMoveDuration;
+
     [ReadOnly] public Pickable pickableOnFocus;
     [HideInInspector] public Pickable pickableOnHand { get; private set; } = null;
 
-    public float maxPickDistance;
-    public float pickUpMoveDuration;
+    [ReadOnly] public FixableObject fixableObjectOnFocus;
 
     // Start is called before the first frame update
     void Start()
@@ -24,11 +28,13 @@ public class PlayerPickController : MonoBehaviour
     {
         RefreshPickableOnFocus();
         RefreshPickableOnHand();
+        CheckAndFixObject();
     }
 
     void RefreshPickableOnFocus()
     {
         pickableOnFocus = null;
+        fixableObjectOnFocus = null;
 
         if (isHoldingPickable)
         {
@@ -40,12 +46,17 @@ public class PlayerPickController : MonoBehaviour
         mask &= ~(1 << playerMask);
 
         var cam = CameraRigManager.Instance.brain.OutputCamera;
-        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out var hitInfo, maxPickDistance, mask))
+        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out var hitInfo, maxInteractionDistance, mask))
         {
-            var pickable = hitInfo.collider.GetComponent<Pickable>();
+            var pickable = hitInfo.collider.attachedRigidbody.GetComponent<Pickable>();
+            var fixableObject = hitInfo.collider.attachedRigidbody.GetComponent<FixableObject>();
             if (pickable)
             {
                 pickableOnFocus = pickable;
+            }
+            else if (fixableObject && fixableObject.isBroken)
+            {
+                fixableObjectOnFocus = fixableObject;
             }
         }
     }
@@ -63,6 +74,17 @@ public class PlayerPickController : MonoBehaviour
             {
                 pickableOnHand = pickableOnFocus;
                 pickableOnHand.OnPickedUp(this);
+            }
+        }
+    }
+
+    void CheckAndFixObject()
+    {
+        if (Input.GetButtonDown("Fix"))
+        {
+            if (isFocusedOnFixableObject)
+            {
+                fixableObjectOnFocus.Fix();
             }
         }
     }

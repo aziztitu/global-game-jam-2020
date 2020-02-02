@@ -6,17 +6,25 @@ using UnityEngine;
 [Serializable]
 public class RearrangeObjectsTask : Task
 {
-    public int objectsRearranged = 0;
+    public int objectsOutOfPlace { get; private set; } = 0;
 
-    // Start is called before the first frame update
-    void Start()
+    public override void CalculateTaskStatus()
     {
-        
-    }
+        base.CalculateTaskStatus();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        int objectsRearranged = 0;
+        foreach (var point in RearrangableObjectManager.Instance.pointsForRearrangingObjects)
+        {
+            if (point.isHoldingObject)
+            {
+                var rearrangable = point.holdingObject.GetComponent<RearrangableObject>();
+                if (rearrangable && rearrangable.data == point.correctObjectData)
+                {
+                    objectsRearranged += 1;
+                }
+            }
+        }
+
+        objectsOutOfPlace = RearrangableObjectManager.Instance.pointsForRearrangingObjects.Count - objectsRearranged;
     }
 }

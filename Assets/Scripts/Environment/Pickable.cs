@@ -2,12 +2,20 @@
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Pickable : MonoBehaviour
 {
-    public string instruction = "Press 'E' to pick up";
+    public bool hasObjectPlacePointInRadius => objectPlacePointInRadius != null;
+
+    public string pickUpInstruction = "'Left Click' to pick up";
+    public string placeInstruction = "'Left Click' to place";
+
+    public UnityEvent onPickedUp;
+    public UnityEvent onDropped;
 
     private Rigidbody rigidbody;
+    private ObjectPlacePoint objectPlacePointInRadius;
 
     void Awake()
     {
@@ -17,31 +25,61 @@ public class Pickable : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
     }
 
-    public void OnPickedUp(PlayerPickController playerPickController)
+    public void OnPickedUp(PlayerInteractionController playerInteractionController)
     {
         rigidbody.isKinematic = true;
-        transform.parent = playerPickController.pickableHolder;
-        transform.DOLocalMove(Vector3.zero, playerPickController.pickUpMoveDuration).Play();    // TODO: Kill the Tween during other actions
+        transform.parent = playerInteractionController.pickableHolder;
+
+        transform.DOKill();
+        transform.DOLocalMove(Vector3.zero, playerInteractionController.pickUpMoveDuration).Play();
     }
 
     public void OnDropped()
     {
-        rigidbody.isKinematic = false;
-        transform.parent = null;
+        if (objectPlacePointInRadius)
+        {
+            OnPlaced(objectPlacePointInRadius);
+        }
+        else
+        {
+            rigidbody.isKinematic = false;
+            transform.parent = null;
+        }
     }
 
-    public void OnPlaced()
+    public void OnPlaced(ObjectPlacePoint objectPlacePoint)
     {
         rigidbody.isKinematic = true;
-        transform.parent = null;
+        transform.parent = objectPlacePoint.holder;
+
+        transform.DOKill();
+        transform.DOLocalMove(Vector3.zero, PlayerModel.Instance.playerInteractionController.pickUpMoveDuration).Play();
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("ObjectPlacePoint") && objectPlacePointInRadius == null)
+        {
+            objectPlacePointInRadius = other.GetComponent<ObjectPlacePoint>();
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("ObjectPlacePoint"))
+        {
+            var objectPlacePoint = other.GetComponent<ObjectPlacePoint>();
+            if (objectPlacePoint == objectPlacePointInRadius)
+            {
+                objectPlacePointInRadius = null;
+            }
+        }
     }
 }

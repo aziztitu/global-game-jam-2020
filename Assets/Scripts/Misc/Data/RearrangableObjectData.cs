@@ -2,12 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RearrangableObjectOriginalPoint : MonoBehaviour
+[CreateAssetMenu(fileName = "New Object", menuName = "Data/Rearrangable Object")]
+public class RearrangableObjectData : ScriptableObject
 {
-    public Transform holder;
-    public Canvas ui;
-    [ReadOnly] public RearrangableObject correctObject;
-
     // Start is called before the first frame update
     void Start()
     {

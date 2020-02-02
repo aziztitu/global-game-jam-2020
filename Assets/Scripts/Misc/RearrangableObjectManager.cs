@@ -13,7 +13,10 @@ public class RearrangableObjectManager : SingletonMonoBehaviour<RearrangableObje
     [Button("Find Rearrange Points", "FindRearrangePoints")] [SerializeField]
     private bool _btnFindRearrangePoints;
 
-    public Randomizer<Transform> rearrangePointsRandomizer;
+    private Randomizer<Transform> rearrangePointsRandomizer;
+
+    public HashSet<ObjectPlacePoint> pointsForRearrangingObjects { get; private set; } =
+        new HashSet<ObjectPlacePoint>();
 
     new void Awake()
     {
@@ -42,5 +45,10 @@ public class RearrangableObjectManager : SingletonMonoBehaviour<RearrangableObje
     public Transform GetRandomRearrangePoint()
     {
         return rearrangePointsRandomizer.GetRandomItem();
+    }
+
+    public void AddPointForRearrangingObjects(ObjectPlacePoint objectPlacePoint)
+    {
+        pointsForRearrangingObjects.Add(objectPlacePoint);
     }
 }

@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TaskManager : MonoBehaviour
+public class TaskManager : SingletonMonoBehaviour<TaskManager>
 {
     public RearrangeObjectsTask rearrangeObjectsTask;
+    public FixObjectsTask fixObjectsTask;
 
     // Start is called before the first frame update
     void Start()
@@ -15,6 +16,7 @@ public class TaskManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // rearrangeObjectsTask.CalculateTaskStatus();
+        fixObjectsTask.CalculateTaskStatus();
     }
 }

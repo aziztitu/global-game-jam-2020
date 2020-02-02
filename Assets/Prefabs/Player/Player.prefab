@@ -83,7 +83,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1846071163982632643}
   m_Layer: 5
-  m_Name: Pickable Info Container
+  m_Name: Interaction Info Container
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -428,9 +428,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickableHolder: {fileID: 1077327215274707385}
-  pickableOnFocus: {fileID: 0}
-  maxPickDistance: 5
+  maxInteractionDistance: 5
   pickUpMoveDuration: 0
+  pickableOnFocus: {fileID: 0}
+  fixableObjectOnFocus: {fileID: 0}
 --- !u!1 &3900880774188795154
 GameObject:
   m_ObjectHideFlags: 0
@@ -544,7 +545,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c48049750ad28514e8268b89f3fa3779, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickableInfoText: {fileID: 6794526149331705924}
+  interactionInfoText: {fileID: 6794526149331705924}
 --- !u!1 &4854257453689729407
 GameObject:
   m_ObjectHideFlags: 0
@@ -587,7 +588,7 @@ GameObject:
   - component: {fileID: 1972230824422403454}
   - component: {fileID: 6794526149331705924}
   m_Layer: 5
-  m_Name: Pickable Info
+  m_Name: Interaction Info
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
