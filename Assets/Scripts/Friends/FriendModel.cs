@@ -13,6 +13,8 @@ public class FriendModel : MonoBehaviour
 
     public float minVelocityToGetHit;
 
+    public GameObject avatar;
+    public Animator animator;
     public GameObject ragdollPrefab;
 
     public bool isHidden = false;

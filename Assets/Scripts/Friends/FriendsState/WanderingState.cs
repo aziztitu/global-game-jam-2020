@@ -26,6 +26,7 @@ public class WanderingState : StateMachine<FriendModel>.State
     public void Enter(FriendModel owner, params object[] args)
     {
         FindNewWaypoint(owner);
+        owner.animator.SetBool("isWalking", true);
     }
 
     public void Update(FriendModel owner)
@@ -38,6 +39,7 @@ public class WanderingState : StateMachine<FriendModel>.State
 
     public void Exit(FriendModel owner)
     {
+        owner.animator.SetBool("isWalking", false);
     }
 
     void FindNewWaypoint(FriendModel owner)
