@@ -7,18 +7,21 @@ using UnityEngine;
 
 public class ObjectPlacementManager : SingletonMonoBehaviour<ObjectPlacementManager>
 {
-    public Transform rearrangePointsRoot;
-    public List<Transform> rearrangePoints;
-
-    [Button("Find Placement Points", "FindPlacementPoints")] [SerializeField]
-    private bool _btnFindPlacementPoints;
+    public Transform placementPointsRoot;
+    public bool findPlacementPointsOnAwake = true;
+    public List<Transform> placementPoints;
 
     private Randomizer<Transform> placementPointsRandomizer;
 
     new void Awake()
     {
         base.Awake();
-        placementPointsRandomizer = new Randomizer<Transform>(rearrangePoints);
+
+        if (findPlacementPointsOnAwake)
+        {
+            FindPlacementPoints();
+        }
+        placementPointsRandomizer = new Randomizer<Transform>(placementPoints);
     }
 
     // Start is called before the first frame update
@@ -31,12 +34,13 @@ public class ObjectPlacementManager : SingletonMonoBehaviour<ObjectPlacementMana
     {
     }
 
-    public void FindPlacementPoints()
+    private void FindPlacementPoints()
     {
-        rearrangePoints.Clear();
-        rearrangePoints = rearrangePointsRoot.GetChildrenOnly();
-
-        // TODO: Set the array as dirty to show array as modified in inspector
+        if (placementPointsRoot)
+        {
+            placementPoints.Clear();
+            placementPoints = placementPointsRoot.GetChildrenOnly();
+        }
     }
 
     public Transform GetRandomPlacementPoint()
