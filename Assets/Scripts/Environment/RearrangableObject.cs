@@ -34,7 +34,7 @@ public class RearrangableObject : MonoBehaviour
     void Rearrange()
     {
         transform.parent = null;
-        transform.position = RearrangableObjectManager.Instance.GetRandomRearrangePoint().position;
+        transform.position = ObjectPlacementManager.Instance.GetRandomPlacementPoint().position;
     }
 
     void SaveOriginalPosition(bool spawnOriginalPoint = true)
@@ -46,7 +46,7 @@ public class RearrangableObject : MonoBehaviour
                 .GetComponent<ObjectPlacePoint>();
             originalPoint.correctObjectData = data;
 
-            RearrangableObjectManager.Instance.AddPointForRearrangingObjects(originalPoint);
+            TaskManager.Instance.rearrangeObjectsTask.AddPointWithMissingObject(originalPoint);
         }
     }
 

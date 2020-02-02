@@ -7,16 +7,14 @@ using UnityEngine.Events;
 public class Pickable : MonoBehaviour
 {
     public Rigidbody rigidbody { get; private set; }
+    public ObjectPlacePoint objectPlacePointInRadius { get; private set; }
     public bool hasObjectPlacePointInRadius => objectPlacePointInRadius != null && !objectPlacePointInRadius.isHoldingObject;
 
     public string pickUpInstruction = "'Left Click' to pick up";
     public string dropInstruction = "'Right Click' to drop";
-    public string placeInstruction = "'Left Click' to place";
 
     public UnityEvent onPickedUp;
     public UnityEvent onDropped;
-
-    private ObjectPlacePoint objectPlacePointInRadius;
 
     void Awake()
     {
@@ -62,6 +60,8 @@ public class Pickable : MonoBehaviour
 
         transform.DOKill();
         transform.DOLocalMove(Vector3.zero, PlayerModel.Instance.playerInteractionController.pickUpMoveDuration).Play();
+
+        objectPlacePoint.OnPlaced(this);
     }
 
     void OnTriggerEnter(Collider other)

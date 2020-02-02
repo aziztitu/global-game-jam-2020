@@ -28,7 +28,8 @@ public class PlayerUI : MonoBehaviour
         {
             if (playerPickController.pickableOnHand.hasObjectPlacePointInRadius)
             {
-                interactionInfoText.text = playerPickController.pickableOnHand.placeInstruction;
+                interactionInfoText.text =
+                    playerPickController.pickableOnHand.objectPlacePointInRadius.placeInstruction;
             }
             else
             {
