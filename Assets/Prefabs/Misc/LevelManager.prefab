@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialParentsDistance: 100
-  parentsTravelSpeed: 60
+  parentsTravelSpeed: 15
   mainMenuScene: Main Menu
   housePictureCamera: {fileID: 0}
 --- !u!114 &8778519027424319806
