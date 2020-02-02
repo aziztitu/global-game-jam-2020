@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using TMPro;
 using UnityEngine;
 
 public class EndScreen : SingletonMonoBehaviour<EndScreen>
@@ -15,6 +16,7 @@ public class EndScreen : SingletonMonoBehaviour<EndScreen>
     public TaskReportItem fixObjectsTaskItem;
     public TaskReportItem trashCleaningTaskItem;
     public TaskReportItem hideFriendsTaskItem;
+    public TextMeshProUGUI rankText;
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +27,6 @@ public class EndScreen : SingletonMonoBehaviour<EndScreen>
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     public void Show()
@@ -44,6 +45,8 @@ public class EndScreen : SingletonMonoBehaviour<EndScreen>
         rearrangeTaskItem.value.text = $"{TaskManager.Instance.rearrangeObjectsTask.objectsOutOfPlace}";
         fixObjectsTaskItem.value.text = $"{TaskManager.Instance.fixObjectsTask.objectsNotFixed}";
         trashCleaningTaskItem.value.text = $"{TaskManager.Instance.trashCleaningTask.trashNotThrown}";
+
+        rankText.text = $"Rank: {TaskManager.Instance.rank}";
     }
 
     void ShowScreen(GameObject screen)
