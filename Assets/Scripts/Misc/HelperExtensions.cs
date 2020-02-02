@@ -68,7 +68,7 @@ public static class HelperExtensions
             var graphicTween = graphic.DOFade(remappedEndValue, duration);
             mySequence.PrependCallback(() => graphic.DOKill()).Insert(0, graphicTween);
         }
-
+        
         return mySequence;
     }
 

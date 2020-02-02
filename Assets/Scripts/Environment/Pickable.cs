@@ -32,13 +32,13 @@ public class Pickable : MonoBehaviour
     {
     }
 
-    public void OnPickedUp(PlayerPickController playerPickController)
+    public void OnPickedUp(PlayerInteractionController playerInteractionController)
     {
         rigidbody.isKinematic = true;
-        transform.parent = playerPickController.pickableHolder;
+        transform.parent = playerInteractionController.pickableHolder;
 
         transform.DOKill();
-        transform.DOLocalMove(Vector3.zero, playerPickController.pickUpMoveDuration).Play();
+        transform.DOLocalMove(Vector3.zero, playerInteractionController.pickUpMoveDuration).Play();
     }
 
     public void OnDropped()
@@ -60,7 +60,7 @@ public class Pickable : MonoBehaviour
         transform.parent = objectPlacePoint.holder;
 
         transform.DOKill();
-        transform.DOLocalMove(Vector3.zero, PlayerModel.Instance.playerPickController.pickUpMoveDuration).Play();
+        transform.DOLocalMove(Vector3.zero, PlayerModel.Instance.playerInteractionController.pickUpMoveDuration).Play();
     }
 
     void OnTriggerEnter(Collider other)

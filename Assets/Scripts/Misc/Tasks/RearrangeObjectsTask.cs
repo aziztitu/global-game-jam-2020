@@ -6,13 +6,13 @@ using UnityEngine;
 [Serializable]
 public class RearrangeObjectsTask : Task
 {
-    public int objectsRearranged { get; private set; } = 0;
+    public int objectsOutOfPlace { get; private set; } = 0;
 
     public override void CalculateTaskStatus()
     {
         base.CalculateTaskStatus();
 
-        objectsRearranged = 0;
+        int objectsRearranged = 0;
         foreach (var point in RearrangableObjectManager.Instance.pointsForRearrangingObjects)
         {
             if (point.isHoldingObject)
@@ -24,5 +24,7 @@ public class RearrangeObjectsTask : Task
                 }
             }
         }
+
+        objectsOutOfPlace = RearrangableObjectManager.Instance.pointsForRearrangingObjects.Count - objectsRearranged;
     }
 }

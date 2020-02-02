@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerUI : MonoBehaviour
 {
-    public TextMeshProUGUI pickableInfoText;
+    public TextMeshProUGUI interactionInfoText;
 
     // Start is called before the first frame update
     void Start()
@@ -20,19 +20,23 @@ public class PlayerUI : MonoBehaviour
 
     void UpdatePickableInfo()
     {
-        var playerPickController = PlayerModel.Instance.playerPickController;
+        var playerPickController = PlayerModel.Instance.playerInteractionController;
 
         if (playerPickController.isHoldingPickable && playerPickController.pickableOnHand.hasObjectPlacePointInRadius)
         {
-            pickableInfoText.text = playerPickController.pickableOnHand.placeInstruction;
+            interactionInfoText.text = playerPickController.pickableOnHand.placeInstruction;
         }
         else if (playerPickController.isFocusedOnPickable)
         {
-            pickableInfoText.text = playerPickController.pickableOnFocus.pickUpInstruction;
+            interactionInfoText.text = playerPickController.pickableOnFocus.pickUpInstruction;
+        }
+        else if (playerPickController.isFocusedOnFixableObject)
+        {
+            interactionInfoText.text = playerPickController.fixableObjectOnFocus.fixInstruction;
         }
         else
         {
-            pickableInfoText.text = "";
+            interactionInfoText.text = "";
         }
     }
 }
