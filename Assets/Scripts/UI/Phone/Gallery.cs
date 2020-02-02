@@ -27,6 +27,7 @@ public class Gallery : SingletonMonoBehaviour<Gallery>
 
     public void NewPhotoSet(Sprite[] imgs, string caption)
     {
+        currentIndex = 0;
         currentImages = imgs;
         HelperExtensions.DestroyAllChildren(ImageParent.transform);
         PopulateGallery(caption);
