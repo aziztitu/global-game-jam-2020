@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WaypointManager : SingletonMonoBehaviour<ObjectPlacementManager>
+public class WaypointManager : SingletonMonoBehaviour<WaypointManager>
 {
     public Transform waypointsRoot;
     public bool findWaypointsOnAwake = true;
