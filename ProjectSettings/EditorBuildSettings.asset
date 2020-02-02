@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Test/Tomas/NewMenutest.unity
     guid: e3a62d13fb268f3479b27168b08efd80
+  - enabled: 1
+    path: Assets/Scenes/Test/Hanna/HouseLighting.unity
+    guid: 7ead3a2e04c2a9646b448240b255c570
   m_configObjects: {}
