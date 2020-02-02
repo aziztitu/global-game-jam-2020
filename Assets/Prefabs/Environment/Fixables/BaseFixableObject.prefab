@@ -92,6 +92,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7baca4ab3cf0b4d4eafbf06e61d63962, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fixInstruction: '''Left Click'' to fix'
   fixedVersion: {fileID: 1529239673290962791}
   brokenVersion: {fileID: 1529239672681096140}
 --- !u!1 &1529239673290962784

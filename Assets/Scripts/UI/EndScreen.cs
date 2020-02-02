@@ -76,6 +76,11 @@ public class EndScreen : SingletonMonoBehaviour<EndScreen>
         preSeq.Play();
     }
 
+    public void Restart()
+    {
+        LevelManager.Instance.Restart();
+    }
+
     public void GoToMainMenu()
     {
         LevelManager.Instance.GoToMainMenu();

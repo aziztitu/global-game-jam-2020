@@ -40,9 +40,9 @@ public class Pickable : MonoBehaviour
         transform.DOLocalMove(Vector3.zero, playerInteractionController.pickUpMoveDuration).Play();
     }
 
-    public void OnDropped()
+    public void OnDropped(bool forceDrop = false)
     {
-        if (objectPlacePointInRadius)
+        if (objectPlacePointInRadius && !forceDrop)
         {
             OnPlaced(objectPlacePointInRadius);
         }

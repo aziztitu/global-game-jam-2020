@@ -1,12 +1,15 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class IdleState : StateMachine<FriendModel>.State
 {
+    [Serializable]
     public class StateData
     {
-
+        public float minWaitDuration;
+        public float maxWaitDuration;
     }
 
 
@@ -20,7 +23,8 @@ public class IdleState : StateMachine<FriendModel>.State
 
     public void Enter(FriendModel owner, params object[] args)
     {
-        owner.stateMachine.SwitchState(WanderingState.Instance);
+        owner.WaitAndExecute(() => { owner.stateMachine.SwitchState(WanderingState.Instance); },
+            Random.Range(owner.idleStateData.minWaitDuration, owner.idleStateData.maxWaitDuration));
     }
 
     public void Update(FriendModel owner)

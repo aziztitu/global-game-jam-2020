@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8778519027424319806}
   - component: {fileID: 4026742300002883471}
   - component: {fileID: 4564871020322205685}
+  - component: {fileID: 4982236971639825738}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -48,6 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initialParentsDistance: 100
   parentsTravelSpeed: 60
+  mainMenuScene: Main Menu
 --- !u!114 &8778519027424319806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87,3 +89,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c16377b70ef86d43ba5e8ae5db19eb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waypointsRoot: {fileID: 0}
+  findWaypointsOnAwake: 1
+  waypoints: []
+--- !u!114 &4982236971639825738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2692109431106633458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed2b288c347fe9544968260992ea71cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minCount: 5
+  maxCount: 10
+  friendPrefab: {fileID: 4864130470528178712, guid: ed87421ab39131b48afac00fdb1361fb,
+    type: 3}
+  minActionInterval: 10
+  maxActionInterval: 15
+  actionProbability: 0.75
+  actionMinDistanceFromPlayer: 15
