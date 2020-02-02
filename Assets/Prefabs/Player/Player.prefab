@@ -429,7 +429,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickableHolder: {fileID: 1077327215274707385}
   maxInteractionDistance: 5
-  pickUpMoveDuration: 0
+  pickUpMoveDuration: 0.5
+  maxThrowForce: 1000
+  throwForceChargeSpeed: 750
+  throwChargeObjectMaxLocalOffset: 0.6
   pickableOnFocus: {fileID: 0}
   fixableObjectOnFocus: {fileID: 0}
 --- !u!1 &3900880774188795154

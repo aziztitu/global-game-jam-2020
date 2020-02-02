@@ -6,15 +6,16 @@ using UnityEngine.Events;
 
 public class Pickable : MonoBehaviour
 {
-    public bool hasObjectPlacePointInRadius => objectPlacePointInRadius != null;
+    public Rigidbody rigidbody { get; private set; }
+    public bool hasObjectPlacePointInRadius => objectPlacePointInRadius != null && !objectPlacePointInRadius.isHoldingObject;
 
     public string pickUpInstruction = "'Left Click' to pick up";
+    public string dropInstruction = "'Right Click' to drop";
     public string placeInstruction = "'Left Click' to place";
 
     public UnityEvent onPickedUp;
     public UnityEvent onDropped;
 
-    private Rigidbody rigidbody;
     private ObjectPlacePoint objectPlacePointInRadius;
 
     void Awake()
