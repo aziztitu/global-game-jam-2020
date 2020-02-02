@@ -5272,6 +5272,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6381586528276526036, guid: 328df857ffe26fb49892bacd3f2f4b7d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6588184739479424535, guid: 328df857ffe26fb49892bacd3f2f4b7d,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -10893,6 +10898,75 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4952256135437660832}
   m_Mesh: {fileID: -8215226919381662987, guid: aa869d260df5cfe4694ba9dfaccb15b6, type: 3}
+--- !u!1001 &1987646802754041679
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6840755571842470154, guid: ce46b09fb16368a4faabff9ff1a2a97d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.7280766
+      objectReference: {fileID: 0}
+    - target: {fileID: 6840755571842470154, guid: ce46b09fb16368a4faabff9ff1a2a97d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.29718065
+      objectReference: {fileID: 0}
+    - target: {fileID: 6840755571842470154, guid: ce46b09fb16368a4faabff9ff1a2a97d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.9389453
+      objectReference: {fileID: 0}
+    - target: {fileID: 6840755571842470154, guid: ce46b09fb16368a4faabff9ff1a2a97d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6840755571842470154, guid: ce46b09fb16368a4faabff9ff1a2a97d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6840755571842470154, guid: ce46b09fb16368a4faabff9ff1a2a97d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6840755571842470154, guid: ce46b09fb16368a4faabff9ff1a2a97d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6840755571842470154, guid: ce46b09fb16368a4faabff9ff1a2a97d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6840755571842470154, guid: ce46b09fb16368a4faabff9ff1a2a97d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6840755571842470154, guid: ce46b09fb16368a4faabff9ff1a2a97d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6840755571842470154, guid: ce46b09fb16368a4faabff9ff1a2a97d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7544768706667553561, guid: ce46b09fb16368a4faabff9ff1a2a97d,
+        type: 3}
+      propertyPath: m_Name
+      value: Chad Ragdoll
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ce46b09fb16368a4faabff9ff1a2a97d, type: 3}
 --- !u!33 &2069137430366758924
 MeshFilter:
   m_ObjectHideFlags: 0

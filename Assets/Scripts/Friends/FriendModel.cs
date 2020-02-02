@@ -13,12 +13,18 @@ public class FriendModel : MonoBehaviour
 
     public float minVelocityToGetHit;
 
+    public GameObject ragdollPrefab;
+
+    public bool isHidden = false;
+
     void Awake()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
 
         stateMachine = new StateMachine<FriendModel>(this);
         stateMachine.SwitchState(IdleState.Instance);
+
+        TaskManager.Instance.hideFriendsTask.AddFriend(this);
     }
 
     // Start is called before the first frame update
@@ -43,6 +49,8 @@ public class FriendModel : MonoBehaviour
             if (pickable && other.rigidbody.velocity.magnitude >= minVelocityToGetHit)
             {
                 // Gets hit
+                // Instantiate ragdoll
+                Instantiate(ragdollPrefab, transform.position, transform.rotation).GetComponent<FriendRagdoll>();
             }
         }
     }

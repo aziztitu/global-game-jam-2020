@@ -7,12 +7,18 @@ public class TaskManager : SingletonMonoBehaviour<TaskManager>
     public RearrangeObjectsTask rearrangeObjectsTask;
     public FixObjectsTask fixObjectsTask;
     public TrashCleaningTask trashCleaningTask;
+    public HideFriendsTask hideFriendsTask;
 
-    [Header("Score Config")] public float bestRearrangeLeft = 10f;
+    [Header("Score Config")] public int bestRearrangeLeft = 10;
+    public int worstRearrangeLeft = 25;
     public float rearrangeWeight = 0.5f;
-    public float bestUnfixedLeft = 0f;
+
+    public int bestUnfixedLeft = 0;
+    public int worstUnfixedLeft = 2;
     public float fixWeight = 0.2f;
-    public float bestTrashLeft = 10f;
+
+    public int bestTrashLeft = 10;
+    public int worstTrashLeft = 25;
     public float trashWeight = 0.3f;
 
     [ReadOnly] public float score;
@@ -67,10 +73,10 @@ public class TaskManager : SingletonMonoBehaviour<TaskManager>
         trashCleaningTask.CalculateTaskStatus();
 
         score = 0;
-        score += HelperUtilities.Remap(rearrangeObjectsTask.objectsOutOfPlace, 0, bestRearrangeLeft, rearrangeWeight,
+        score += HelperUtilities.Remap(rearrangeObjectsTask.objectsOutOfPlace, bestRearrangeLeft, worstRearrangeLeft, rearrangeWeight,
             0);
-        score += HelperUtilities.Remap(fixObjectsTask.objectsNotFixed, 0, bestUnfixedLeft, fixWeight, 0);
-        score += HelperUtilities.Remap(trashCleaningTask.trashNotThrown, 0, bestTrashLeft, trashWeight, 0);
+        score += HelperUtilities.Remap(fixObjectsTask.objectsNotFixed, bestUnfixedLeft, worstUnfixedLeft, fixWeight, 0);
+        score += HelperUtilities.Remap(trashCleaningTask.trashNotThrown, bestTrashLeft, worstTrashLeft, trashWeight, 0);
 
         score = Mathf.Clamp01(score);
     }
