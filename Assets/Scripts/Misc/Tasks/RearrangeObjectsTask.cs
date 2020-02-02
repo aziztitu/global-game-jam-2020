@@ -8,12 +8,15 @@ public class RearrangeObjectsTask : Task
 {
     public int objectsOutOfPlace { get; private set; } = 0;
 
+    public HashSet<ObjectPlacePoint> pointsWithMissingObjects { get; private set; } =
+        new HashSet<ObjectPlacePoint>();
+
     public override void CalculateTaskStatus()
     {
         base.CalculateTaskStatus();
 
         int objectsRearranged = 0;
-        foreach (var point in RearrangableObjectManager.Instance.pointsForRearrangingObjects)
+        foreach (var point in pointsWithMissingObjects)
         {
             if (point.isHoldingObject)
             {
@@ -25,6 +28,11 @@ public class RearrangeObjectsTask : Task
             }
         }
 
-        objectsOutOfPlace = RearrangableObjectManager.Instance.pointsForRearrangingObjects.Count - objectsRearranged;
+        objectsOutOfPlace = pointsWithMissingObjects.Count - objectsRearranged;
+    }
+
+    public void AddPointWithMissingObject(ObjectPlacePoint objectPlacePoint)
+    {
+        pointsWithMissingObjects.Add(objectPlacePoint);
     }
 }

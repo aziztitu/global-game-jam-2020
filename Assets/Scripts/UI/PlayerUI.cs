@@ -22,9 +22,19 @@ public class PlayerUI : MonoBehaviour
     {
         var playerPickController = PlayerModel.Instance.playerInteractionController;
 
-        if (playerPickController.isHoldingPickable && playerPickController.pickableOnHand.hasObjectPlacePointInRadius)
+        interactionInfoText.text = "";
+
+        if (playerPickController.isHoldingPickable)
         {
-            interactionInfoText.text = playerPickController.pickableOnHand.placeInstruction;
+            if (playerPickController.pickableOnHand.hasObjectPlacePointInRadius)
+            {
+                interactionInfoText.text =
+                    playerPickController.pickableOnHand.objectPlacePointInRadius.placeInstruction;
+            }
+            else
+            {
+                interactionInfoText.text = playerPickController.pickableOnHand.dropInstruction;
+            }
         }
         else if (playerPickController.isFocusedOnPickable)
         {
@@ -33,10 +43,6 @@ public class PlayerUI : MonoBehaviour
         else if (playerPickController.isFocusedOnFixableObject)
         {
             interactionInfoText.text = playerPickController.fixableObjectOnFocus.fixInstruction;
-        }
-        else
-        {
-            interactionInfoText.text = "";
         }
     }
 }
